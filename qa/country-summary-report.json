@@ -1,0 +1,4073 @@
+{
+  "classifications": {
+    "fail": 0,
+    "pass": 16,
+    "warn": 1
+  },
+  "countries": [
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Kyoto and Japan is an island country in East Asia. The country is known for dense urban corridors, long-distance rail links, mountain interiors, and.",
+            "key": "temple-districts",
+            "label": "temple districts and shrines",
+            "source": "wikivoyage",
+            "weight": 44
+          },
+          {
+            "category": "anchor",
+            "evidence": "Tokyo and Japan is an island country in East Asia. The country is known for dense urban corridors, long-distance rail links, mountain interiors, and.",
+            "key": "rail-city-hops",
+            "label": "rail-linked city hops",
+            "source": "wikivoyage",
+            "weight": 42
+          },
+          {
+            "category": "anchor",
+            "evidence": "Hakone and Travel patterns often connect major cities with heritage districts, onsen areas, and regional food cultures.",
+            "key": "hot-spring-stays",
+            "label": "onsen towns and hot-spring stays",
+            "source": "wikivoyage",
+            "weight": 36
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 3,
+          "featuredDestinationNames": [
+            "Kyoto",
+            "Tokyo",
+            "Hakone"
+          ],
+          "publishedDestinationCount": 3,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit",
+          "openingFamily": "trip-through",
+          "patternFamily": "island-beach-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "temples",
+              "destinationName": "Kyoto",
+              "featuredRank": 1,
+              "key": "temple-districts",
+              "label": "Kyoto's shrine-and-temple quarters",
+              "theme": "culture",
+              "weight": 32
+            },
+            {
+              "cueType": "hot-springs",
+              "destinationName": "Hakone",
+              "featuredRank": 3,
+              "key": "hot-spring-stays",
+              "label": "Hakone's hot-spring inns",
+              "theme": "restorative",
+              "weight": 32
+            },
+            {
+              "cueType": "rail",
+              "destinationName": "Tokyo",
+              "featuredRank": 2,
+              "key": "rail-city-hops",
+              "label": "Tokyo's city districts",
+              "theme": "transit",
+              "weight": 28
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "temples",
+            "destinationName": "Kyoto",
+            "featuredRank": 1,
+            "key": "temple-districts",
+            "label": "Kyoto's shrine-and-temple quarters",
+            "theme": "culture",
+            "weight": 32
+          },
+          {
+            "cueType": "hot-springs",
+            "destinationName": "Hakone",
+            "featuredRank": 3,
+            "key": "hot-spring-stays",
+            "label": "Hakone's hot-spring inns",
+            "theme": "restorative",
+            "weight": 32
+          },
+          {
+            "cueType": "rail",
+            "destinationName": "Tokyo",
+            "featuredRank": 2,
+            "key": "rail-city-hops",
+            "label": "Tokyo's city districts",
+            "theme": "transit",
+            "weight": 28
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "Kyoto",
+            "featuredRank": 1,
+            "key": "historic-gardens",
+            "label": "Kyoto's historic core",
+            "theme": "culture",
+            "weight": 23
+          },
+          {
+            "cueType": "rail",
+            "destinationName": "Hakone",
+            "featuredRank": 3,
+            "key": "rail-city-hops",
+            "label": "Hakone's city districts",
+            "theme": "transit",
+            "weight": 23
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Tokyo",
+            "featuredRank": 2,
+            "key": "food-stops",
+            "label": "Tokyo's food markets",
+            "theme": "food",
+            "weight": 21
+          },
+          {
+            "cueType": "mountain",
+            "destinationName": "Hakone",
+            "featuredRank": 3,
+            "key": "mountain-routes",
+            "label": "Hakone's mountain scenery",
+            "theme": "landscape",
+            "weight": 18
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "spring and autumn",
+          "primaryDestinationName": "Kyoto",
+          "reason": "Kyoto: October to November, March to May",
+          "reasonSource": "climate",
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "temple districts and shrines and rail-linked city hops",
+          "key": "rail-linked-culture-route",
+          "label": "rail-linked culture route",
+          "source": "wikivoyage",
+          "weight": 28
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "temple districts and shrines and historic gardens and quieter districts",
+            "key": "culture-first-itineraries",
+            "label": "culture-first itineraries",
+            "source": "wikivoyage",
+            "weight": 22
+          },
+          {
+            "category": "trip_style",
+            "evidence": "regional food stops",
+            "key": "food-led-city-breaks",
+            "label": "food-led city breaks",
+            "source": "wikivoyage",
+            "weight": 18
+          }
+        ]
+      },
+      "name": "Japan",
+      "proper_noun_anchors": [
+        "Kyoto's shrine-and-temple quarters",
+        "Hakone's hot-spring inns",
+        "Tokyo's city districts"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 3,
+          "available_proper_noun_anchor_count": 7,
+          "cadence_signature": "lead|trip-fit",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Hakone"
+            },
+            {
+              "count": 1,
+              "name": "Kyoto"
+            },
+            {
+              "count": 1,
+              "name": "Tokyo"
+            }
+          ],
+          "editorial_pattern": "island-beach-country",
+          "opening_family": "trip-through",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 3,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 3
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "temple districts and shrines",
+        "rail-linked city hops",
+        "onsen towns and hot-spring stays"
+      ],
+      "selected_variant": "full",
+      "slug": "japan",
+      "summary": "A trip through Japan threads together Kyoto's shrine-and-temple quarters, Hakone's hot-spring inns, and Tokyo's city districts into a single, varied route. It rewards culture-heavy itineraries and food-first city breaks, balancing major landmarks with quieter, local corners.",
+      "trip_style_fit": [
+        "culture-first itineraries",
+        "food-led city breaks"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Kyoto and Japan has beautiful temples and gardens, and its major cities remain central to how most first trips are planned.",
+            "key": "historic-gardens",
+            "label": "historic gardens and quieter districts",
+            "source": "wikivoyage",
+            "weight": 40
+          },
+          {
+            "category": "anchor",
+            "evidence": "Japan is an island country in East Asia. The country is known for major cities, long-distance rail links, temple traditions, and mountain. and Japan is easiest to read in shorter rail-linked hops that balance big cities, heritage districts, and onsen towns.",
+            "key": "rail-city-hops",
+            "label": "rail-linked city hops",
+            "source": "wikivoyage",
+            "weight": 28
+          },
+          {
+            "category": "anchor",
+            "evidence": "Japan is easiest to read in shorter rail-linked hops that balance big cities, heritage districts, and onsen towns.",
+            "key": "hot-spring-stays",
+            "label": "onsen towns and hot-spring stays",
+            "source": "wikivoyage",
+            "weight": 20
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 1,
+          "featuredDestinationNames": [
+            "Kyoto"
+          ],
+          "publishedDestinationCount": 1,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit",
+          "openingFamily": "trip-through",
+          "patternFamily": "island-beach-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "historic",
+              "destinationName": "Kyoto",
+              "featuredRank": 1,
+              "key": "historic-gardens",
+              "label": "Kyoto's historic core",
+              "theme": "culture",
+              "weight": 26
+            },
+            {
+              "cueType": "source-wikivoyage",
+              "destinationName": "Tokyo",
+              "key": "source-place",
+              "label": "Tokyo",
+              "source": "wikivoyage",
+              "theme": "transit",
+              "weight": 21
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "historic",
+            "destinationName": "Kyoto",
+            "featuredRank": 1,
+            "key": "historic-gardens",
+            "label": "Kyoto's historic core",
+            "theme": "culture",
+            "weight": 26
+          },
+          {
+            "cueType": "source-wikivoyage",
+            "destinationName": "Tokyo",
+            "key": "source-place",
+            "label": "Tokyo",
+            "source": "wikivoyage",
+            "theme": "transit",
+            "weight": 21
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "spring and autumn",
+          "primaryDestinationName": null,
+          "reason": "Travelers with a flexible schedule are usually better off aiming for spring or autumn.",
+          "reasonSource": "wikivoyage",
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "historic gardens and quieter districts and rail-linked city hops",
+          "key": "rail-linked-culture-route",
+          "label": "rail-linked culture route",
+          "source": "wikivoyage",
+          "weight": 28
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "historic gardens and quieter districts and temple districts and shrines",
+            "key": "culture-first-itineraries",
+            "label": "culture-first itineraries",
+            "source": "wikivoyage",
+            "weight": 22
+          },
+          {
+            "category": "trip_style",
+            "evidence": "regional food stops",
+            "key": "food-led-city-breaks",
+            "label": "food-led city breaks",
+            "source": "wikipedia",
+            "weight": 18
+          }
+        ]
+      },
+      "name": "Japan",
+      "proper_noun_anchors": [
+        "Kyoto's historic core",
+        "Tokyo"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 3,
+          "available_proper_noun_anchor_count": 2,
+          "cadence_signature": "lead|trip-fit",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Kyoto"
+            }
+          ],
+          "editorial_pattern": "island-beach-country",
+          "opening_family": "trip-through",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 2,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 3
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "historic gardens and quieter districts",
+        "rail-linked city hops",
+        "onsen towns and hot-spring stays"
+      ],
+      "selected_variant": "full",
+      "slug": "japan-sparse-live-shape",
+      "summary": "A trip through Japan threads together Kyoto's historic core, Tokyo, and hot-spring towns into a single, varied route. It rewards culture-heavy itineraries and food-first city breaks, balancing major landmarks with quieter, local corners.",
+      "trip_style_fit": [
+        "culture-first itineraries",
+        "food-led city breaks"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Bologna and Its rail network links many of the best-known cultural centers and food cities.",
+            "key": "rail-city-hops",
+            "label": "rail-linked city hops",
+            "source": "wikivoyage",
+            "weight": 42
+          },
+          {
+            "category": "anchor",
+            "evidence": "Rome and Italy is a country in Southern and Western Europe. The country combines a dense set of historic cities, archaeological zones, regional.",
+            "key": "archaeology-quarters",
+            "label": "archaeology sites and old quarters",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Venice and Italy is best approached as a city-to-city route built around archaeology, historic centers, regional eating, and coastal detours.",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "wikivoyage",
+            "weight": 28
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 4,
+          "featuredDestinationNames": [
+            "Rome",
+            "Florence",
+            "Venice",
+            "Bologna"
+          ],
+          "publishedDestinationCount": 4,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit|structural-note",
+          "openingFamily": "other",
+          "patternFamily": "compact-culture-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "archaeology",
+              "destinationName": "Rome",
+              "featuredRank": 1,
+              "key": "archaeology-quarters",
+              "label": "Rome's archaeology-heavy center",
+              "theme": "culture",
+              "weight": 36
+            },
+            {
+              "cueType": "food",
+              "destinationName": "Florence",
+              "featuredRank": 2,
+              "key": "food-stops",
+              "label": "Florence's food markets",
+              "theme": "food",
+              "weight": 24
+            },
+            {
+              "cueType": "island-ferry",
+              "destinationName": "Venice",
+              "featuredRank": 3,
+              "key": "coastal-islands",
+              "label": "Venice's sea-facing stops",
+              "theme": "coastal",
+              "weight": 24
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "archaeology",
+            "destinationName": "Rome",
+            "featuredRank": 1,
+            "key": "archaeology-quarters",
+            "label": "Rome's archaeology-heavy center",
+            "theme": "culture",
+            "weight": 36
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Florence",
+            "featuredRank": 2,
+            "key": "food-stops",
+            "label": "Florence's food markets",
+            "theme": "food",
+            "weight": 24
+          },
+          {
+            "cueType": "island-ferry",
+            "destinationName": "Venice",
+            "featuredRank": 3,
+            "key": "coastal-islands",
+            "label": "Venice's sea-facing stops",
+            "theme": "coastal",
+            "weight": 24
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Bologna",
+            "featuredRank": 4,
+            "key": "food-stops",
+            "label": "Bologna's food markets",
+            "theme": "food",
+            "weight": 24
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Rome",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "Rome's neighborhood food stops",
+            "theme": "food",
+            "weight": 23
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "Florence",
+            "featuredRank": 2,
+            "key": "historic-gardens",
+            "label": "Florence's historic core",
+            "theme": "culture",
+            "weight": 21
+          },
+          {
+            "cueType": "rail",
+            "destinationName": "Bologna",
+            "featuredRank": 4,
+            "key": "rail-city-hops",
+            "label": "Bologna's city districts",
+            "theme": "transit",
+            "weight": 21
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "Venice",
+            "featuredRank": 3,
+            "key": "historic-gardens",
+            "label": "Venice's historic core",
+            "theme": "culture",
+            "weight": 19
+          },
+          {
+            "cueType": "source-wikipedia",
+            "destinationName": "Southern",
+            "key": "source-place",
+            "label": "Southern",
+            "source": "wikipedia",
+            "theme": "general",
+            "weight": 15
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "spring and autumn",
+          "primaryDestinationName": "Rome",
+          "reason": "Rome: April to May, September to October",
+          "reasonSource": "climate",
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "rail-linked city hops and archaeology sites and old quarters",
+          "key": "rail-linked-culture-route",
+          "label": "rail-linked culture route",
+          "source": "wikivoyage",
+          "weight": 28
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "archaeology sites and old quarters and historic gardens and quieter districts",
+            "key": "culture-first-itineraries",
+            "label": "culture-first itineraries",
+            "source": "wikivoyage",
+            "weight": 22
+          },
+          {
+            "category": "trip_style",
+            "evidence": "regional food stops",
+            "key": "food-led-city-breaks",
+            "label": "food-led city breaks",
+            "source": "destinations",
+            "weight": 18
+          }
+        ]
+      },
+      "name": "Italy",
+      "proper_noun_anchors": [
+        "Rome's archaeology-heavy center",
+        "Florence's food markets",
+        "Venice's sea-facing stops"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 3,
+          "available_proper_noun_anchor_count": 9,
+          "cadence_signature": "lead|trip-fit|structural-note",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Florence"
+            },
+            {
+              "count": 1,
+              "name": "Rome"
+            },
+            {
+              "count": 1,
+              "name": "Venice"
+            }
+          ],
+          "editorial_pattern": "compact-culture-country",
+          "opening_family": "other",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 3,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 3
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "rail-linked city hops",
+        "archaeology sites and old quarters",
+        "coastal islands and ferry routes"
+      ],
+      "selected_variant": "full",
+      "slug": "italy",
+      "summary": "A route that links Rome's archaeology-heavy center, Florence's food markets, and Venice's sea-facing stops captures the broader regional character of Italy. The itinerary suits culture-heavy itineraries and food-first city breaks, where the travel between stops is part of the experience.",
+      "trip_style_fit": [
+        "culture-first itineraries",
+        "food-led city breaks"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Chiang Mai and Thailand is a country in Southeast Asia. Its travel pattern ranges from temple-heavy northern cities to street-food capitals and beach.",
+            "key": "temple-districts",
+            "label": "temple districts and shrines",
+            "source": "wikivoyage",
+            "weight": 44
+          },
+          {
+            "category": "anchor",
+            "evidence": "Phuket and Thailand is a country in Southeast Asia. Its travel pattern ranges from temple-heavy northern cities to street-food capitals and beach.",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Bangkok and Thailand is a country in Southeast Asia. Its travel pattern ranges from temple-heavy northern cities to street-food capitals and beach.",
+            "key": "food-stops",
+            "label": "regional food stops",
+            "source": "wikivoyage",
+            "weight": 38
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 3,
+          "featuredDestinationNames": [
+            "Bangkok",
+            "Chiang Mai",
+            "Phuket"
+          ],
+          "publishedDestinationCount": 3,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit",
+          "openingFamily": "other",
+          "patternFamily": "food-and-city-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "food",
+              "destinationName": "Bangkok",
+              "featuredRank": 1,
+              "key": "food-stops",
+              "label": "Bangkok's neighborhood food stops",
+              "theme": "food",
+              "weight": 30
+            },
+            {
+              "cueType": "temples",
+              "destinationName": "Chiang Mai",
+              "featuredRank": 2,
+              "key": "temple-districts",
+              "label": "Chiang Mai's shrine-and-temple quarters",
+              "theme": "culture",
+              "weight": 30
+            },
+            {
+              "cueType": "island-ferry",
+              "destinationName": "Phuket",
+              "featuredRank": 3,
+              "key": "coastal-islands",
+              "label": "Phuket's sea-facing stops",
+              "theme": "coastal",
+              "weight": 24
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "food",
+            "destinationName": "Bangkok",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "Bangkok's neighborhood food stops",
+            "theme": "food",
+            "weight": 30
+          },
+          {
+            "cueType": "temples",
+            "destinationName": "Chiang Mai",
+            "featuredRank": 2,
+            "key": "temple-districts",
+            "label": "Chiang Mai's shrine-and-temple quarters",
+            "theme": "culture",
+            "weight": 30
+          },
+          {
+            "cueType": "island-ferry",
+            "destinationName": "Phuket",
+            "featuredRank": 3,
+            "key": "coastal-islands",
+            "label": "Phuket's sea-facing stops",
+            "theme": "coastal",
+            "weight": 24
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "Chiang Mai",
+            "featuredRank": 2,
+            "key": "historic-gardens",
+            "label": "Chiang Mai's historic core",
+            "theme": "culture",
+            "weight": 21
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "autumn and winter",
+          "primaryDestinationName": "Bangkok",
+          "reason": "Bangkok: November to February",
+          "reasonSource": "climate",
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "temple districts and shrines and regional food stops",
+          "key": "food-and-culture-route",
+          "label": "city-to-city food and culture route",
+          "source": "wikivoyage",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "regional food stops",
+            "key": "food-led-city-breaks",
+            "label": "food-led city breaks",
+            "source": "wikivoyage",
+            "weight": 18
+          },
+          {
+            "category": "trip_style",
+            "evidence": "temple districts and shrines and historic gardens and quieter districts",
+            "key": "culture-first-itineraries",
+            "label": "culture-first itineraries",
+            "source": "wikivoyage",
+            "weight": 22
+          }
+        ]
+      },
+      "name": "Thailand",
+      "proper_noun_anchors": [
+        "Bangkok's neighborhood food stops",
+        "Chiang Mai's shrine-and-temple quarters",
+        "Phuket's sea-facing stops"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 3,
+          "available_proper_noun_anchor_count": 4,
+          "cadence_signature": "lead|trip-fit",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Bangkok"
+            },
+            {
+              "count": 1,
+              "name": "Chiang Mai"
+            },
+            {
+              "count": 1,
+              "name": "Phuket"
+            }
+          ],
+          "editorial_pattern": "food-and-city-country",
+          "opening_family": "other",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 3,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 3
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "temple districts and shrines",
+        "coastal islands and ferry routes",
+        "regional food stops"
+      ],
+      "selected_variant": "full",
+      "slug": "thailand",
+      "summary": "A route that links Bangkok's neighborhood food stops, Chiang Mai's shrine-and-temple quarters, and Phuket's sea-facing stops captures the broader regional character of Thailand. The itinerary suits food-first city breaks and culture-heavy itineraries, where the travel between stops is part of the experience.",
+      "trip_style_fit": [
+        "food-led city breaks",
+        "culture-first itineraries"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Reykjavik and Iceland is a Nordic island country in the North Atlantic Ocean. Travelers associate it with volcanic landscapes, glaciers, geothermal.",
+            "key": "hot-spring-stays",
+            "label": "onsen towns and hot-spring stays",
+            "source": "wikivoyage",
+            "weight": 36
+          },
+          {
+            "category": "anchor",
+            "evidence": "Reykjavik and Iceland is a Nordic island country in the North Atlantic Ocean. Travelers associate it with volcanic landscapes, glaciers, geothermal.",
+            "key": "mountain-routes",
+            "label": "mountain routes and alpine scenery",
+            "source": "wikivoyage",
+            "weight": 38
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 3,
+          "featuredDestinationNames": [
+            "Reykjavik",
+            "South Coast",
+            "Akureyri"
+          ],
+          "publishedDestinationCount": 3,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit",
+          "openingFamily": "trip-through",
+          "patternFamily": "first-time-highlights-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "hot-springs",
+              "destinationName": "Reykjavik",
+              "featuredRank": 1,
+              "key": "hot-spring-stays",
+              "label": "Reykjavik's hot-spring inns",
+              "theme": "restorative",
+              "weight": 36
+            },
+            {
+              "cueType": "whale",
+              "destinationName": "Akureyri",
+              "featuredRank": 3,
+              "key": "wildlife-days",
+              "label": "whale-watching off Akureyri",
+              "theme": "wildlife",
+              "weight": 34
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "hot-springs",
+            "destinationName": "Reykjavik",
+            "featuredRank": 1,
+            "key": "hot-spring-stays",
+            "label": "Reykjavik's hot-spring inns",
+            "theme": "restorative",
+            "weight": 36
+          },
+          {
+            "cueType": "whale",
+            "destinationName": "Akureyri",
+            "featuredRank": 3,
+            "key": "wildlife-days",
+            "label": "whale-watching off Akureyri",
+            "theme": "wildlife",
+            "weight": 34
+          },
+          {
+            "cueType": "glacier-waterfall",
+            "destinationName": "South Coast",
+            "featuredRank": 2,
+            "key": "mountain-routes",
+            "label": "South Coast's glacier-and-waterfall drives",
+            "theme": "landscape",
+            "weight": 32
+          },
+          {
+            "cueType": "geothermal",
+            "destinationName": "Reykjavik",
+            "featuredRank": 1,
+            "key": "hot-spring-stays",
+            "label": "Reykjavik as a geothermal base",
+            "theme": "restorative",
+            "weight": 29
+          },
+          {
+            "cueType": "hot-springs",
+            "destinationName": "Akureyri",
+            "featuredRank": 3,
+            "key": "hot-spring-stays",
+            "label": "Akureyri's hot-spring inns",
+            "theme": "restorative",
+            "weight": 29
+          },
+          {
+            "cueType": "coastal-region",
+            "destinationName": "South Coast",
+            "featuredRank": 2,
+            "key": "coastal-islands",
+            "label": "coastal towns along the South Coast",
+            "theme": "coastal",
+            "weight": 23
+          },
+          {
+            "cueType": "geothermal",
+            "destinationName": "Akureyri",
+            "featuredRank": 3,
+            "key": "hot-spring-stays",
+            "label": "Akureyri as a geothermal base",
+            "theme": "restorative",
+            "weight": 22
+          },
+          {
+            "cueType": "mountain",
+            "destinationName": "South Coast",
+            "featuredRank": 2,
+            "key": "mountain-routes",
+            "label": "South Coast's mountain scenery",
+            "theme": "landscape",
+            "weight": 20
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "summer and autumn",
+          "primaryDestinationName": "Reykjavik",
+          "reason": "Reykjavik: June to September",
+          "reasonSource": "climate",
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "mountain routes and alpine scenery and onsen towns and hot-spring stays",
+          "key": "drive-first-landscape-route",
+          "label": "drive-first landscape route",
+          "source": "wikivoyage",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "road-trip cues from destination context",
+            "key": "self-drive-routes",
+            "label": "self-drive routes",
+            "source": "destinations",
+            "weight": 14
+          },
+          {
+            "category": "trip_style",
+            "evidence": "mountain routes and alpine scenery, wildlife viewing and reserve days, and coastal islands and ferry routes",
+            "key": "outdoor-heavy-routes",
+            "label": "outdoor-heavy routes",
+            "source": "wikivoyage",
+            "weight": 18
+          }
+        ]
+      },
+      "name": "Iceland",
+      "proper_noun_anchors": [
+        "Reykjavik's hot-spring inns",
+        "whale-watching off Akureyri"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 2,
+          "available_proper_noun_anchor_count": 8,
+          "cadence_signature": "lead|trip-fit",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Akureyri"
+            },
+            {
+              "count": 1,
+              "name": "Reykjavik"
+            }
+          ],
+          "editorial_pattern": "first-time-highlights-country",
+          "opening_family": "trip-through",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 2,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 2
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "onsen towns and hot-spring stays",
+        "mountain routes and alpine scenery"
+      ],
+      "selected_variant": "tight",
+      "slug": "iceland",
+      "summary": "A trip through Iceland threads together Reykjavik's hot-spring inns, whale-watching off Akureyri, and mountain scenery into a single, varied route. The itinerary suits self-drive itineraries and outdoor-heavy routes, where the travel between stops is part of the experience.",
+      "trip_style_fit": [
+        "self-drive routes",
+        "outdoor-heavy routes"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Marrakesh and Morocco is a country in the Maghreb region of North Africa. Travel patterns span medinas, mountain routes, Atlantic coast time, and.",
+            "key": "medina-souqs",
+            "label": "medinas and souq quarters",
+            "source": "destinations",
+            "weight": 24
+          },
+          {
+            "category": "anchor",
+            "evidence": "Essaouira and Morocco is a country in the Maghreb region of North Africa. Travel patterns span medinas, mountain routes, Atlantic coast time, and.",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "wikivoyage",
+            "weight": 38
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 4,
+          "featuredDestinationNames": [
+            "Marrakesh",
+            "Fez",
+            "Atlas Mountains",
+            "Essaouira"
+          ],
+          "publishedDestinationCount": 4,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|lead",
+          "openingFamily": "other",
+          "patternFamily": "food-and-city-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "medina-souq",
+              "destinationName": "Marrakesh",
+              "featuredRank": 1,
+              "key": "medina-souqs",
+              "label": "Marrakesh's medina lanes",
+              "theme": "culture",
+              "weight": 32
+            },
+            {
+              "cueType": "coastal",
+              "destinationName": "Essaouira",
+              "featuredRank": 4,
+              "key": "coastal-islands",
+              "label": "Essaouira's waterfront quarters",
+              "theme": "coastal",
+              "weight": 22
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "medina-souq",
+            "destinationName": "Marrakesh",
+            "featuredRank": 1,
+            "key": "medina-souqs",
+            "label": "Marrakesh's medina lanes",
+            "theme": "culture",
+            "weight": 32
+          },
+          {
+            "cueType": "medina-souq",
+            "destinationName": "Fez",
+            "featuredRank": 2,
+            "key": "medina-souqs",
+            "label": "Fez's souq quarters",
+            "theme": "culture",
+            "weight": 30
+          },
+          {
+            "cueType": "medina-souq",
+            "destinationName": "Atlas Mountains",
+            "featuredRank": 3,
+            "key": "medina-souqs",
+            "label": "Atlas Mountains' medina lanes",
+            "theme": "culture",
+            "weight": 28
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Marrakesh",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "Marrakesh's food markets",
+            "theme": "food",
+            "weight": 27
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "Essaouira",
+            "featuredRank": 4,
+            "key": "coastal-islands",
+            "label": "Essaouira's waterfront quarters",
+            "theme": "coastal",
+            "weight": 22
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "Fez",
+            "featuredRank": 2,
+            "key": "historic-gardens",
+            "label": "Fez's older quarters",
+            "theme": "culture",
+            "weight": 21
+          },
+          {
+            "cueType": "mountain",
+            "destinationName": "Atlas Mountains",
+            "featuredRank": 3,
+            "key": "mountain-routes",
+            "label": "Atlas Mountains' mountain scenery",
+            "theme": "landscape",
+            "weight": 21
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "Marrakesh",
+            "featuredRank": 1,
+            "key": "historic-gardens",
+            "label": "Marrakesh's historic core",
+            "theme": "culture",
+            "weight": 20
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Essaouira",
+            "featuredRank": 4,
+            "key": "food-stops",
+            "label": "Essaouira's food markets",
+            "theme": "food",
+            "weight": 17
+          },
+          {
+            "cueType": "source-wikipedia",
+            "destinationName": "Maghreb",
+            "key": "source-place",
+            "label": "Maghreb",
+            "source": "wikipedia",
+            "theme": "general",
+            "weight": 15
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "spring and autumn",
+          "reason": null,
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "regional food stops and mountain routes and alpine scenery",
+          "key": "food-and-culture-route",
+          "label": "city-to-city food and culture route",
+          "source": "wikivoyage",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "regional food stops",
+            "key": "food-led-city-breaks",
+            "label": "food-led city breaks",
+            "source": "wikivoyage",
+            "weight": 18
+          },
+          {
+            "category": "trip_style",
+            "evidence": "medinas and souq quarters",
+            "key": "culture-first-itineraries",
+            "label": "culture-first itineraries",
+            "source": "destinations",
+            "weight": 22
+          }
+        ]
+      },
+      "name": "Morocco",
+      "proper_noun_anchors": [
+        "Marrakesh's medina lanes",
+        "Essaouira's waterfront quarters"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 2,
+          "available_proper_noun_anchor_count": 10,
+          "cadence_signature": "lead|lead",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Essaouira"
+            },
+            {
+              "count": 1,
+              "name": "Marrakesh"
+            }
+          ],
+          "editorial_pattern": "food-and-city-country",
+          "opening_family": "other",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 2,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 1,
+            "wikipedia": 0,
+            "wikivoyage": 1
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "medinas and souq quarters",
+        "coastal islands and ferry routes"
+      ],
+      "selected_variant": "tight",
+      "slug": "morocco",
+      "summary": "A route that links Marrakesh's medina lanes and Essaouira's waterfront quarters captures the broader regional character of Morocco. It’s the kind of route where food-first city breaks and culture-heavy itineraries take center stage across the trip.",
+      "trip_style_fit": [
+        "food-led city breaks",
+        "culture-first itineraries"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "New York City and The United States is a country primarily located in North America. For travelers it spans major cities, national parks, long road routes,.",
+            "key": "food-stops",
+            "label": "regional food stops",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "California Coast",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "destinations",
+            "weight": 12
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 4,
+          "featuredDestinationNames": [
+            "New York City",
+            "New Orleans",
+            "Yellowstone",
+            "California Coast"
+          ],
+          "publishedDestinationCount": 4,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit|structural-note",
+          "openingFamily": "see-at-most-distinct",
+          "patternFamily": "drive-first-scenery-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "wildlife-geyser",
+              "destinationName": "Yellowstone",
+              "featuredRank": 3,
+              "key": "wildlife-days",
+              "label": "Yellowstone's park-and-wildlife loops",
+              "theme": "wildlife",
+              "weight": 32
+            },
+            {
+              "cueType": "food",
+              "destinationName": "New York City",
+              "featuredRank": 1,
+              "key": "food-stops",
+              "label": "New York City's food markets",
+              "theme": "food",
+              "weight": 26
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "wildlife-geyser",
+            "destinationName": "Yellowstone",
+            "featuredRank": 3,
+            "key": "wildlife-days",
+            "label": "Yellowstone's park-and-wildlife loops",
+            "theme": "wildlife",
+            "weight": 32
+          },
+          {
+            "cueType": "food",
+            "destinationName": "New York City",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "New York City's food markets",
+            "theme": "food",
+            "weight": 26
+          },
+          {
+            "cueType": "food",
+            "destinationName": "New Orleans",
+            "featuredRank": 2,
+            "key": "food-stops",
+            "label": "New Orleans' neighborhood food stops",
+            "theme": "food",
+            "weight": 24
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "New York City",
+            "featuredRank": 1,
+            "key": "historic-gardens",
+            "label": "New York City's historic core",
+            "theme": "culture",
+            "weight": 23
+          },
+          {
+            "cueType": "coastal-region",
+            "destinationName": "California Coast",
+            "featuredRank": 4,
+            "key": "coastal-islands",
+            "label": "road-trip stops along the California Coast",
+            "theme": "coastal",
+            "weight": 22
+          },
+          {
+            "cueType": "source-wikivoyage",
+            "destinationName": "The United States",
+            "key": "source-place",
+            "label": "The United States",
+            "source": "wikivoyage",
+            "theme": "food",
+            "weight": 22
+          },
+          {
+            "cueType": "mountain",
+            "destinationName": "Yellowstone",
+            "featuredRank": 3,
+            "key": "mountain-routes",
+            "label": "Yellowstone's alpine base",
+            "theme": "landscape",
+            "weight": 21
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "April to June, September to October",
+          "reason": null,
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "regional food stops and mountain routes and alpine scenery",
+          "key": "drive-first-landscape-route",
+          "label": "drive-first landscape route",
+          "source": "destinations",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "mountain routes and alpine scenery, coastal islands and ferry routes, and wildlife viewing and reserve days",
+            "key": "outdoor-heavy-routes",
+            "label": "outdoor-heavy routes",
+            "source": "destinations",
+            "weight": 18
+          },
+          {
+            "category": "trip_style",
+            "evidence": "4 published destinations",
+            "key": "first-multi-stop-routes",
+            "label": "first multi-stop routes",
+            "source": "destinations",
+            "weight": 18
+          }
+        ]
+      },
+      "name": "United States",
+      "proper_noun_anchors": [
+        "Yellowstone's park-and-wildlife loops",
+        "New York City's food markets"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 2,
+          "available_proper_noun_anchor_count": 7,
+          "cadence_signature": "lead|trip-fit|structural-note",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "New York City"
+            },
+            {
+              "count": 1,
+              "name": "Yellowstone"
+            }
+          ],
+          "editorial_pattern": "drive-first-scenery-country",
+          "opening_family": "see-at-most-distinct",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 2,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 1,
+            "wikipedia": 0,
+            "wikivoyage": 1
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "regional food stops",
+        "coastal islands and ferry routes"
+      ],
+      "selected_variant": "tight",
+      "slug": "united-states",
+      "summary": "To see United States at its most distinct, follow a path that connects Yellowstone's park-and-wildlife loops and New York City's food markets. This journey favors outdoor-heavy routes and first-time multi-stop trips, with enough time to settle into each distinct region.",
+      "trip_style_fit": [
+        "outdoor-heavy routes",
+        "first multi-stop routes"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Rotorua and New Zealand is an island country in the southwestern Pacific Ocean. Travelers usually know it for alpine landscapes, coastal drives,.",
+            "key": "hot-spring-stays",
+            "label": "onsen towns and hot-spring stays",
+            "source": "wikivoyage",
+            "weight": 36
+          },
+          {
+            "category": "anchor",
+            "evidence": "Queenstown and island country in the southwestern Pacific Ocean",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Queenstown and New Zealand is an island country in the southwestern Pacific Ocean. Travelers usually know it for alpine landscapes, coastal drives,.",
+            "key": "mountain-routes",
+            "label": "mountain routes and alpine scenery",
+            "source": "wikivoyage",
+            "weight": 38
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 3,
+          "featuredDestinationNames": [
+            "Queenstown",
+            "Rotorua",
+            "Kaikoura"
+          ],
+          "publishedDestinationCount": 3,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit",
+          "openingFamily": "itineraries-through",
+          "patternFamily": "first-time-highlights-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "hot-springs",
+              "destinationName": "Rotorua",
+              "featuredRank": 2,
+              "key": "hot-spring-stays",
+              "label": "Rotorua's hot-spring inns",
+              "theme": "restorative",
+              "weight": 34
+            },
+            {
+              "cueType": "whale",
+              "destinationName": "Kaikoura",
+              "featuredRank": 3,
+              "key": "wildlife-days",
+              "label": "Kaikoura's whale-watching waters",
+              "theme": "wildlife",
+              "weight": 34
+            },
+            {
+              "cueType": "mountain",
+              "destinationName": "Queenstown",
+              "featuredRank": 1,
+              "key": "mountain-routes",
+              "label": "Queenstown's alpine base",
+              "theme": "landscape",
+              "weight": 28
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "hot-springs",
+            "destinationName": "Rotorua",
+            "featuredRank": 2,
+            "key": "hot-spring-stays",
+            "label": "Rotorua's hot-spring inns",
+            "theme": "restorative",
+            "weight": 34
+          },
+          {
+            "cueType": "whale",
+            "destinationName": "Kaikoura",
+            "featuredRank": 3,
+            "key": "wildlife-days",
+            "label": "Kaikoura's whale-watching waters",
+            "theme": "wildlife",
+            "weight": 34
+          },
+          {
+            "cueType": "mountain",
+            "destinationName": "Queenstown",
+            "featuredRank": 1,
+            "key": "mountain-routes",
+            "label": "Queenstown's alpine base",
+            "theme": "landscape",
+            "weight": 28
+          },
+          {
+            "cueType": "geothermal",
+            "destinationName": "Rotorua",
+            "featuredRank": 2,
+            "key": "hot-spring-stays",
+            "label": "Rotorua as a geothermal base",
+            "theme": "restorative",
+            "weight": 27
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "Kaikoura",
+            "featuredRank": 3,
+            "key": "coastal-islands",
+            "label": "Kaikoura's beach districts",
+            "theme": "coastal",
+            "weight": 21
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "November to March",
+          "reason": null,
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "mountain routes and alpine scenery and coastal islands and ferry routes",
+          "key": "drive-first-landscape-route",
+          "label": "drive-first landscape route",
+          "source": "wikivoyage",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "road-trip cues from destination context",
+            "key": "self-drive-routes",
+            "label": "self-drive routes",
+            "source": "destinations",
+            "weight": 14
+          },
+          {
+            "category": "trip_style",
+            "evidence": "mountain routes and alpine scenery, coastal islands and ferry routes, and wildlife viewing and reserve days",
+            "key": "outdoor-heavy-routes",
+            "label": "outdoor-heavy routes",
+            "source": "wikivoyage",
+            "weight": 18
+          }
+        ]
+      },
+      "name": "New Zealand",
+      "proper_noun_anchors": [
+        "Rotorua's hot-spring inns",
+        "Kaikoura's whale-watching waters",
+        "Queenstown's alpine base"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 3,
+          "available_proper_noun_anchor_count": 5,
+          "cadence_signature": "lead|trip-fit",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Kaikoura"
+            },
+            {
+              "count": 1,
+              "name": "Queenstown"
+            },
+            {
+              "count": 1,
+              "name": "Rotorua"
+            }
+          ],
+          "editorial_pattern": "first-time-highlights-country",
+          "opening_family": "itineraries-through",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 3,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 3
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "onsen towns and hot-spring stays",
+        "coastal islands and ferry routes",
+        "mountain routes and alpine scenery"
+      ],
+      "selected_variant": "full",
+      "slug": "new-zealand",
+      "summary": "Itineraries through New Zealand typically connect Rotorua's hot-spring inns, Kaikoura's whale-watching waters, and Queenstown's alpine base into one journey. This journey favors self-drive itineraries and outdoor-heavy routes, with enough time to settle into each distinct region.",
+      "trip_style_fit": [
+        "self-drive routes",
+        "outdoor-heavy routes"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Athens and Greece is a country in Southeast Europe. Trips usually combine archaeology, old quarters, island ferries, and long meals near the sea.",
+            "key": "archaeology-quarters",
+            "label": "archaeology sites and old quarters",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Athens and Greece is a country in Southeast Europe. Trips usually combine archaeology, old quarters, island ferries, and long meals near the sea.",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Athens and food",
+            "key": "food-stops",
+            "label": "regional food stops",
+            "source": "destinations",
+            "weight": 14
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 3,
+          "featuredDestinationNames": [
+            "Athens",
+            "Santorini",
+            "Crete"
+          ],
+          "publishedDestinationCount": 3,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit",
+          "openingFamily": "see-at-most-distinct",
+          "patternFamily": "island-beach-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "archaeology",
+              "destinationName": "Athens",
+              "featuredRank": 1,
+              "key": "archaeology-quarters",
+              "label": "Athens' archaeology-heavy center",
+              "theme": "culture",
+              "weight": 36
+            },
+            {
+              "cueType": "island-ferry",
+              "destinationName": "Santorini",
+              "featuredRank": 2,
+              "key": "coastal-islands",
+              "label": "Santorini's harbor neighborhoods",
+              "theme": "coastal",
+              "weight": 26
+            },
+            {
+              "cueType": "mountain",
+              "destinationName": "Crete",
+              "featuredRank": 3,
+              "key": "mountain-routes",
+              "label": "Crete's alpine base",
+              "theme": "landscape",
+              "weight": 21
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "archaeology",
+            "destinationName": "Athens",
+            "featuredRank": 1,
+            "key": "archaeology-quarters",
+            "label": "Athens' archaeology-heavy center",
+            "theme": "culture",
+            "weight": 36
+          },
+          {
+            "cueType": "island-ferry",
+            "destinationName": "Santorini",
+            "featuredRank": 2,
+            "key": "coastal-islands",
+            "label": "Santorini's harbor neighborhoods",
+            "theme": "coastal",
+            "weight": 26
+          },
+          {
+            "cueType": "island-ferry",
+            "destinationName": "Athens",
+            "featuredRank": 1,
+            "key": "coastal-islands",
+            "label": "Athens' harbor neighborhoods",
+            "theme": "coastal",
+            "weight": 25
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "Crete",
+            "featuredRank": 3,
+            "key": "coastal-islands",
+            "label": "Crete's sea-facing stays",
+            "theme": "coastal",
+            "weight": 24
+          },
+          {
+            "cueType": "mountain",
+            "destinationName": "Crete",
+            "featuredRank": 3,
+            "key": "mountain-routes",
+            "label": "Crete's alpine base",
+            "theme": "landscape",
+            "weight": 21
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Athens",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "Athens' neighborhood food stops",
+            "theme": "food",
+            "weight": 20
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Crete",
+            "featuredRank": 3,
+            "key": "food-stops",
+            "label": "Crete's neighborhood food stops",
+            "theme": "food",
+            "weight": 16
+          },
+          {
+            "cueType": "source-wikipedia",
+            "destinationName": "Southeast Europe",
+            "key": "source-place",
+            "label": "Southeast Europe",
+            "source": "wikipedia",
+            "theme": "general",
+            "weight": 15
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "May to June, September to October",
+          "primaryDestinationName": "Athens",
+          "reason": "Athens: April to June, September to October",
+          "reasonSource": "climate",
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "archaeology sites and old quarters and coastal islands and ferry routes",
+          "key": "coastal-island-hopping-route",
+          "label": "coastal island-hopping route",
+          "source": "wikivoyage",
+          "weight": 22
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "archaeology sites and old quarters",
+            "key": "culture-first-itineraries",
+            "label": "culture-first itineraries",
+            "source": "wikivoyage",
+            "weight": 22
+          },
+          {
+            "category": "trip_style",
+            "evidence": "regional food stops",
+            "key": "food-led-city-breaks",
+            "label": "food-led city breaks",
+            "source": "destinations",
+            "weight": 18
+          }
+        ]
+      },
+      "name": "Greece",
+      "proper_noun_anchors": [
+        "Athens' archaeology-heavy center",
+        "Santorini's harbor neighborhoods",
+        "Crete's alpine base"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 3,
+          "available_proper_noun_anchor_count": 8,
+          "cadence_signature": "lead|trip-fit",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Athens"
+            },
+            {
+              "count": 1,
+              "name": "Crete"
+            },
+            {
+              "count": 1,
+              "name": "Santorini"
+            }
+          ],
+          "editorial_pattern": "island-beach-country",
+          "opening_family": "see-at-most-distinct",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 3,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 1,
+            "wikipedia": 0,
+            "wikivoyage": 2
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "archaeology sites and old quarters",
+        "coastal islands and ferry routes",
+        "regional food stops"
+      ],
+      "selected_variant": "full",
+      "slug": "greece",
+      "summary": "To see Greece at its most distinct, follow a path that connects Athens' archaeology-heavy center, Santorini's harbor neighborhoods, and Crete's alpine base. This trip is designed for culture-heavy itineraries and food-first city breaks, focusing on discovery at your own pace.",
+      "trip_style_fit": [
+        "culture-first itineraries",
+        "food-led city breaks"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Vancouver and Canada is a country in North America. For travelers it spans Pacific cities, Rocky Mountain parklands, French-speaking urban cores, and.",
+            "key": "mountain-routes",
+            "label": "mountain routes and alpine scenery",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Vancouver and country guide for city-food trips and mountain-wildlife routes",
+            "key": "food-stops",
+            "label": "regional food stops",
+            "source": "wikivoyage",
+            "weight": 32
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 4,
+          "featuredDestinationNames": [
+            "Vancouver",
+            "Banff",
+            "Montreal",
+            "Quebec City"
+          ],
+          "publishedDestinationCount": 4,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|lead",
+          "openingFamily": "classic-route",
+          "patternFamily": "food-and-city-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "wildlife-park",
+              "destinationName": "Banff",
+              "featuredRank": 2,
+              "key": "wildlife-days",
+              "label": "Banff's wildlife loops",
+              "theme": "wildlife",
+              "weight": 34
+            },
+            {
+              "cueType": "coastal",
+              "destinationName": "Vancouver",
+              "featuredRank": 1,
+              "key": "coastal-islands",
+              "label": "Vancouver's sea-facing stays",
+              "theme": "coastal",
+              "weight": 28
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "wildlife-park",
+            "destinationName": "Banff",
+            "featuredRank": 2,
+            "key": "wildlife-days",
+            "label": "Banff's wildlife loops",
+            "theme": "wildlife",
+            "weight": 34
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "Vancouver",
+            "featuredRank": 1,
+            "key": "coastal-islands",
+            "label": "Vancouver's sea-facing stays",
+            "theme": "coastal",
+            "weight": 28
+          },
+          {
+            "cueType": "mountain",
+            "destinationName": "Vancouver",
+            "featuredRank": 1,
+            "key": "mountain-routes",
+            "label": "Vancouver's alpine base",
+            "theme": "landscape",
+            "weight": 25
+          },
+          {
+            "cueType": "mountain",
+            "destinationName": "Banff",
+            "featuredRank": 2,
+            "key": "mountain-routes",
+            "label": "Banff's alpine base",
+            "theme": "landscape",
+            "weight": 23
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Montreal",
+            "featuredRank": 3,
+            "key": "food-stops",
+            "label": "Montreal's food markets",
+            "theme": "food",
+            "weight": 22
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Vancouver",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "Vancouver's neighborhood food stops",
+            "theme": "food",
+            "weight": 20
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Quebec City",
+            "featuredRank": 4,
+            "key": "food-stops",
+            "label": "Quebec City's neighborhood food stops",
+            "theme": "food",
+            "weight": 20
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "Quebec City",
+            "featuredRank": 4,
+            "key": "historic-gardens",
+            "label": "Quebec City's older quarters",
+            "theme": "culture",
+            "weight": 17
+          },
+          {
+            "cueType": "source-wikipedia",
+            "destinationName": "Rocky Mountain",
+            "key": "source-place",
+            "label": "Rocky Mountain",
+            "source": "wikipedia",
+            "theme": "landscape",
+            "weight": 13
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "summer and autumn",
+          "primaryDestinationName": "Vancouver",
+          "reason": "Vancouver: June to September",
+          "reasonSource": "climate",
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "mountain routes and alpine scenery and regional food stops",
+          "key": "food-and-culture-route",
+          "label": "city-to-city food and culture route",
+          "source": "wikivoyage",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "regional food stops",
+            "key": "food-led-city-breaks",
+            "label": "food-led city breaks",
+            "source": "wikivoyage",
+            "weight": 18
+          },
+          {
+            "category": "trip_style",
+            "evidence": "historic gardens and quieter districts",
+            "key": "culture-first-itineraries",
+            "label": "culture-first itineraries",
+            "source": "destinations",
+            "weight": 22
+          }
+        ]
+      },
+      "name": "Canada",
+      "proper_noun_anchors": [
+        "Banff's wildlife loops",
+        "Vancouver's sea-facing stays"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 2,
+          "available_proper_noun_anchor_count": 9,
+          "cadence_signature": "lead|lead",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Banff"
+            },
+            {
+              "count": 1,
+              "name": "Vancouver"
+            }
+          ],
+          "editorial_pattern": "food-and-city-country",
+          "opening_family": "classic-route",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 2,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 2
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "mountain routes and alpine scenery",
+        "regional food stops"
+      ],
+      "selected_variant": "tight",
+      "slug": "canada",
+      "summary": "The classic route through Canada moves between Banff's wildlife loops, Vancouver's sea-facing stays, and mountain scenery. It’s the kind of route where food-first city breaks and culture-heavy itineraries take center stage across the trip.",
+      "trip_style_fit": [
+        "food-led city breaks",
+        "culture-first itineraries"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Sydney and Australia is a country and continent surrounded by the Indian and Pacific oceans. Travel patterns split between big coastal cities,.",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Red Centre and Seasonality flips between the tropical north, the southern cities, and the desert interior, so timing depends heavily on the chosen region.",
+            "key": "desert-routes",
+            "label": "desert routes and kasbah stops",
+            "source": "wikivoyage",
+            "weight": 32
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 4,
+          "featuredDestinationNames": [
+            "Sydney",
+            "Melbourne",
+            "Whitsundays",
+            "Red Centre"
+          ],
+          "publishedDestinationCount": 4,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit|structural-note",
+          "openingFamily": "distinct-side",
+          "patternFamily": "drive-first-scenery-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "coastal",
+              "destinationName": "Sydney",
+              "featuredRank": 1,
+              "key": "coastal-islands",
+              "label": "Sydney's coastal detours",
+              "theme": "coastal",
+              "weight": 28
+            },
+            {
+              "cueType": "food",
+              "destinationName": "Melbourne",
+              "featuredRank": 2,
+              "key": "food-stops",
+              "label": "Melbourne's neighborhood food stops",
+              "theme": "food",
+              "weight": 24
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "coastal",
+            "destinationName": "Sydney",
+            "featuredRank": 1,
+            "key": "coastal-islands",
+            "label": "Sydney's coastal detours",
+            "theme": "coastal",
+            "weight": 28
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Melbourne",
+            "featuredRank": 2,
+            "key": "food-stops",
+            "label": "Melbourne's neighborhood food stops",
+            "theme": "food",
+            "weight": 24
+          },
+          {
+            "cueType": "island-ferry",
+            "destinationName": "Whitsundays",
+            "featuredRank": 3,
+            "key": "coastal-islands",
+            "label": "Whitsundays' sea-facing stops",
+            "theme": "coastal",
+            "weight": 24
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Sydney",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "Sydney's food markets",
+            "theme": "food",
+            "weight": 23
+          },
+          {
+            "cueType": "fallback",
+            "destinationName": "Red Centre",
+            "featuredRank": 4,
+            "key": "destination-stop",
+            "label": "Red Centre",
+            "theme": "general",
+            "weight": 12
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "March to April, June to December",
+          "reason": null,
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "coastal islands and ferry routes and desert routes and kasbah stops",
+          "key": "drive-first-landscape-route",
+          "label": "drive-first landscape route",
+          "source": "wikivoyage",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "coastal islands and ferry routes and desert routes and kasbah stops",
+            "key": "outdoor-heavy-routes",
+            "label": "outdoor-heavy routes",
+            "source": "wikivoyage",
+            "weight": 18
+          },
+          {
+            "category": "trip_style",
+            "evidence": "4 published destinations",
+            "key": "first-multi-stop-routes",
+            "label": "first multi-stop routes",
+            "source": "destinations",
+            "weight": 18
+          }
+        ]
+      },
+      "name": "Australia",
+      "proper_noun_anchors": [
+        "Sydney's coastal detours",
+        "Melbourne's neighborhood food stops"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 2,
+          "available_proper_noun_anchor_count": 5,
+          "cadence_signature": "lead|trip-fit|structural-note",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Melbourne"
+            },
+            {
+              "count": 1,
+              "name": "Sydney"
+            }
+          ],
+          "editorial_pattern": "drive-first-scenery-country",
+          "opening_family": "distinct-side",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 2,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 2
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "coastal islands and ferry routes",
+        "desert routes and kasbah stops"
+      ],
+      "selected_variant": "tight",
+      "slug": "australia",
+      "summary": "The most distinct side of Australia is found by moving between Sydney's coastal detours, Melbourne's neighborhood food stops, and desert routes. This journey favors outdoor-heavy routes and first-time multi-stop trips, with enough time to settle into each distinct region.",
+      "trip_style_fit": [
+        "outdoor-heavy routes",
+        "first multi-stop routes"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "warn",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Bali and Indonesia is a country in Southeast Asia and Oceania. For travelers it mixes temple-heavy islands, surf and reef routes, big-city.",
+            "key": "temple-districts",
+            "label": "temple districts and shrines",
+            "source": "wikivoyage",
+            "weight": 44
+          },
+          {
+            "category": "anchor",
+            "evidence": "Bali and Indonesia is a country in Southeast Asia and Oceania. For travelers it mixes temple-heavy islands, surf and reef routes, big-city.",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "wikivoyage",
+            "weight": 38
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 4,
+          "featuredDestinationNames": [
+            "Bali",
+            "Yogyakarta",
+            "Raja Ampat",
+            "Komodo"
+          ],
+          "publishedDestinationCount": 4,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit|structural-note",
+          "openingFamily": "landscape-reveals",
+          "patternFamily": "multi-region-repeat-trip-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "temples",
+              "destinationName": "Bali",
+              "featuredRank": 1,
+              "key": "temple-districts",
+              "label": "Bali's shrine-and-temple quarters",
+              "theme": "culture",
+              "weight": 32
+            },
+            {
+              "cueType": "wildlife",
+              "destinationName": "Raja Ampat",
+              "featuredRank": 3,
+              "key": "wildlife-days",
+              "label": "Raja Ampat's wildlife loops",
+              "theme": "wildlife",
+              "weight": 32
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "temples",
+            "destinationName": "Bali",
+            "featuredRank": 1,
+            "key": "temple-districts",
+            "label": "Bali's shrine-and-temple quarters",
+            "theme": "culture",
+            "weight": 32
+          },
+          {
+            "cueType": "wildlife",
+            "destinationName": "Raja Ampat",
+            "featuredRank": 3,
+            "key": "wildlife-days",
+            "label": "Raja Ampat's wildlife loops",
+            "theme": "wildlife",
+            "weight": 32
+          },
+          {
+            "cueType": "temples",
+            "destinationName": "Yogyakarta",
+            "featuredRank": 2,
+            "key": "temple-districts",
+            "label": "Yogyakarta's shrine-and-temple quarters",
+            "theme": "culture",
+            "weight": 30
+          },
+          {
+            "cueType": "wildlife",
+            "destinationName": "Komodo",
+            "featuredRank": 4,
+            "key": "wildlife-days",
+            "label": "wildlife days around Komodo",
+            "theme": "wildlife",
+            "weight": 30
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "Bali",
+            "featuredRank": 1,
+            "key": "coastal-islands",
+            "label": "Bali's coastal detours",
+            "theme": "coastal",
+            "weight": 25
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Yogyakarta",
+            "featuredRank": 2,
+            "key": "food-stops",
+            "label": "Yogyakarta's food markets",
+            "theme": "food",
+            "weight": 21
+          },
+          {
+            "cueType": "island-ferry",
+            "destinationName": "Raja Ampat",
+            "featuredRank": 3,
+            "key": "coastal-islands",
+            "label": "Raja Ampat's harbor neighborhoods",
+            "theme": "coastal",
+            "weight": 21
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Bali",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "Bali's food markets",
+            "theme": "food",
+            "weight": 20
+          },
+          {
+            "cueType": "island-ferry",
+            "destinationName": "Komodo",
+            "featuredRank": 4,
+            "key": "coastal-islands",
+            "label": "Komodo's sea-facing stops",
+            "theme": "coastal",
+            "weight": 19
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "Yogyakarta",
+            "featuredRank": 2,
+            "key": "historic-gardens",
+            "label": "Yogyakarta's historic core",
+            "theme": "culture",
+            "weight": 18
+          },
+          {
+            "cueType": "mountain",
+            "destinationName": "Komodo",
+            "featuredRank": 4,
+            "key": "mountain-routes",
+            "label": "Komodo's alpine base",
+            "theme": "landscape",
+            "weight": 16
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "May to September",
+          "reason": null,
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "temple districts and shrines and coastal islands and ferry routes",
+          "key": "drive-first-landscape-route",
+          "label": "drive-first landscape route",
+          "source": "destinations",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "4 published destinations",
+            "key": "first-multi-stop-routes",
+            "label": "first multi-stop routes",
+            "source": "destinations",
+            "weight": 18
+          },
+          {
+            "category": "trip_style",
+            "evidence": "temple districts and shrines",
+            "key": "culture-first-itineraries",
+            "label": "culture-first itineraries",
+            "source": "wikivoyage",
+            "weight": 22
+          }
+        ]
+      },
+      "name": "Indonesia",
+      "proper_noun_anchors": [
+        "Bali's shrine-and-temple quarters",
+        "Raja Ampat's wildlife loops"
+      ],
+      "review": {
+        "classification": "warn",
+        "issues": [
+          {
+            "key": "validation-multiple-sentences-start-with-the-risks-repetitive-cadence",
+            "message": "Multiple sentences start with \"the\" — risks repetitive cadence.",
+            "severity": "warn"
+          }
+        ],
+        "metrics": {
+          "anchor_count": 2,
+          "available_proper_noun_anchor_count": 11,
+          "cadence_signature": "lead|trip-fit|structural-note",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Bali"
+            },
+            {
+              "count": 1,
+              "name": "Raja Ampat"
+            }
+          ],
+          "editorial_pattern": "multi-region-repeat-trip-country",
+          "opening_family": "landscape-reveals",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 2,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 2
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "temple districts and shrines",
+        "coastal islands and ferry routes"
+      ],
+      "selected_variant": "tight",
+      "slug": "indonesia",
+      "summary": "The landscape of Indonesia reveals its variety as you travel between Bali's shrine-and-temple quarters and Raja Ampat's wildlife loops. This trip favors longer itineraries, with enough time to settle into each distinct region. The trip is at its strongest when handled as a series of regional loops rather than a single sweep.",
+      "trip_style_fit": [
+        "first multi-stop routes",
+        "culture-first itineraries"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": [
+          "Multiple sentences start with \"the\" — risks repetitive cadence."
+        ]
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Bergen and Norway is a Nordic country in Northern Europe. Travelers associate it with fjords, island roads, ferry links, and a wide north-south swing.",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Oslo and The trip logic usually follows either a city-and-fjord route or a more committed scenic-driving plan.",
+            "key": "mountain-routes",
+            "label": "mountain routes and alpine scenery",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Tromso and Summer handles the broadest mix of drives and hikes, while far-north wildlife and aurora timing pull the calendar in other directions.",
+            "key": "wildlife-days",
+            "label": "wildlife viewing and reserve days",
+            "source": "wikivoyage",
+            "weight": 26
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 4,
+          "featuredDestinationNames": [
+            "Oslo",
+            "Bergen",
+            "Lofoten",
+            "Tromso"
+          ],
+          "publishedDestinationCount": 4,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit|structural-note",
+          "openingFamily": "journey-split",
+          "patternFamily": "multi-region-repeat-trip-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "whale",
+              "destinationName": "Tromso",
+              "featuredRank": 4,
+              "key": "wildlife-days",
+              "label": "whale-watching off Tromso",
+              "theme": "wildlife",
+              "weight": 32
+            },
+            {
+              "cueType": "food",
+              "destinationName": "Oslo",
+              "featuredRank": 1,
+              "key": "food-stops",
+              "label": "Oslo's neighborhood food stops",
+              "theme": "food",
+              "weight": 26
+            },
+            {
+              "cueType": "island-ferry",
+              "destinationName": "Bergen",
+              "featuredRank": 2,
+              "key": "coastal-islands",
+              "label": "Bergen's island-and-ferry stops",
+              "theme": "coastal",
+              "weight": 26
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "whale",
+            "destinationName": "Tromso",
+            "featuredRank": 4,
+            "key": "wildlife-days",
+            "label": "whale-watching off Tromso",
+            "theme": "wildlife",
+            "weight": 32
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Oslo",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "Oslo's neighborhood food stops",
+            "theme": "food",
+            "weight": 26
+          },
+          {
+            "cueType": "island-ferry",
+            "destinationName": "Bergen",
+            "featuredRank": 2,
+            "key": "coastal-islands",
+            "label": "Bergen's island-and-ferry stops",
+            "theme": "coastal",
+            "weight": 26
+          },
+          {
+            "cueType": "island-ferry",
+            "destinationName": "Lofoten",
+            "featuredRank": 3,
+            "key": "coastal-islands",
+            "label": "Lofoten's island-and-ferry stops",
+            "theme": "coastal",
+            "weight": 24
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Bergen",
+            "featuredRank": 2,
+            "key": "food-stops",
+            "label": "Bergen's neighborhood food stops",
+            "theme": "food",
+            "weight": 21
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "Tromso",
+            "featuredRank": 4,
+            "key": "coastal-islands",
+            "label": "Tromso's coastal detours",
+            "theme": "coastal",
+            "weight": 19
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "Bergen",
+            "featuredRank": 2,
+            "key": "historic-gardens",
+            "label": "Bergen's older quarters",
+            "theme": "culture",
+            "weight": 18
+          },
+          {
+            "cueType": "source-wikipedia",
+            "destinationName": "Northern Europe",
+            "key": "source-place",
+            "label": "Northern Europe",
+            "source": "wikipedia",
+            "theme": "general",
+            "weight": 14
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "summer and autumn",
+          "primaryDestinationName": "Oslo",
+          "reason": "Oslo: June to September",
+          "reasonSource": "climate",
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "mountain routes and alpine scenery and coastal islands and ferry routes",
+          "key": "drive-first-landscape-route",
+          "label": "drive-first landscape route",
+          "source": "wikivoyage",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "mountain routes and alpine scenery, coastal islands and ferry routes, and wildlife viewing and reserve days",
+            "key": "outdoor-heavy-routes",
+            "label": "outdoor-heavy routes",
+            "source": "wikivoyage",
+            "weight": 18
+          },
+          {
+            "category": "trip_style",
+            "evidence": "4 published destinations",
+            "key": "first-multi-stop-routes",
+            "label": "first multi-stop routes",
+            "source": "destinations",
+            "weight": 18
+          }
+        ]
+      },
+      "name": "Norway",
+      "proper_noun_anchors": [
+        "whale-watching off Tromso",
+        "Oslo's neighborhood food stops",
+        "Bergen's island-and-ferry stops"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 3,
+          "available_proper_noun_anchor_count": 8,
+          "cadence_signature": "lead|trip-fit|structural-note",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Bergen"
+            },
+            {
+              "count": 1,
+              "name": "Oslo"
+            },
+            {
+              "count": 1,
+              "name": "Tromso"
+            }
+          ],
+          "editorial_pattern": "multi-region-repeat-trip-country",
+          "opening_family": "journey-split",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 3,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 3
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "coastal islands and ferry routes",
+        "mountain routes and alpine scenery",
+        "wildlife viewing and reserve days"
+      ],
+      "selected_variant": "full",
+      "slug": "norway",
+      "summary": "A journey through Norway is best split into regional loops like whale-watching off Tromso, Oslo's neighborhood food stops, and Bergen's island-and-ferry stops. This trip favors longer itineraries, with enough time to settle into each distinct region. The trip is at its strongest when handled as a series of regional loops rather than a single sweep.",
+      "trip_style_fit": [
+        "outdoor-heavy routes",
+        "first multi-stop routes"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Barcelona and Heat, holiday crowds, and big regional differences mean the best trip shape changes a lot between Andalusia, the north, and the islands.",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Barcelona and Spain is a country in Southwestern Europe. For travelers it mixes late-night cities, historic quarters, strong regional food cultures, and.",
+            "key": "food-stops",
+            "label": "regional food stops",
+            "source": "wikivoyage",
+            "weight": 38
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 4,
+          "featuredDestinationNames": [
+            "Barcelona",
+            "Seville",
+            "San Sebastian",
+            "Costa Brava"
+          ],
+          "publishedDestinationCount": 4,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit",
+          "openingFamily": "other",
+          "patternFamily": "food-and-city-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "coastal",
+              "destinationName": "Barcelona",
+              "featuredRank": 1,
+              "key": "coastal-islands",
+              "label": "Barcelona's beach districts",
+              "theme": "coastal",
+              "weight": 28
+            },
+            {
+              "cueType": "food",
+              "destinationName": "Seville",
+              "featuredRank": 2,
+              "key": "food-stops",
+              "label": "Seville's food markets",
+              "theme": "food",
+              "weight": 24
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "coastal",
+            "destinationName": "Barcelona",
+            "featuredRank": 1,
+            "key": "coastal-islands",
+            "label": "Barcelona's beach districts",
+            "theme": "coastal",
+            "weight": 28
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Seville",
+            "featuredRank": 2,
+            "key": "food-stops",
+            "label": "Seville's food markets",
+            "theme": "food",
+            "weight": 24
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "San Sebastian",
+            "featuredRank": 3,
+            "key": "coastal-islands",
+            "label": "San Sebastian's beach districts",
+            "theme": "coastal",
+            "weight": 24
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Barcelona",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "Barcelona's neighborhood food stops",
+            "theme": "food",
+            "weight": 23
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "Costa Brava",
+            "featuredRank": 4,
+            "key": "coastal-islands",
+            "label": "Costa Brava's sea-facing stays",
+            "theme": "coastal",
+            "weight": 22
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "Seville",
+            "featuredRank": 2,
+            "key": "historic-gardens",
+            "label": "Seville's historic core",
+            "theme": "culture",
+            "weight": 21
+          },
+          {
+            "cueType": "food",
+            "destinationName": "San Sebastian",
+            "featuredRank": 3,
+            "key": "food-stops",
+            "label": "San Sebastian's neighborhood food stops",
+            "theme": "food",
+            "weight": 19
+          },
+          {
+            "cueType": "source-wikipedia",
+            "destinationName": "Southwestern Europe",
+            "key": "source-place",
+            "label": "Southwestern Europe",
+            "source": "wikipedia",
+            "theme": "general",
+            "weight": 15
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "April to June, September to October",
+          "reason": null,
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "regional food stops and coastal islands and ferry routes",
+          "key": "food-and-culture-route",
+          "label": "city-to-city food and culture route",
+          "source": "wikivoyage",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "regional food stops",
+            "key": "food-led-city-breaks",
+            "label": "food-led city breaks",
+            "source": "wikivoyage",
+            "weight": 18
+          },
+          {
+            "category": "trip_style",
+            "evidence": "historic gardens and quieter districts",
+            "key": "culture-first-itineraries",
+            "label": "culture-first itineraries",
+            "source": "destinations",
+            "weight": 22
+          }
+        ]
+      },
+      "name": "Spain",
+      "proper_noun_anchors": [
+        "Barcelona's beach districts",
+        "Seville's food markets"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 2,
+          "available_proper_noun_anchor_count": 8,
+          "cadence_signature": "lead|trip-fit",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Barcelona"
+            },
+            {
+              "count": 1,
+              "name": "Seville"
+            }
+          ],
+          "editorial_pattern": "food-and-city-country",
+          "opening_family": "other",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 2,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 2
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "coastal islands and ferry routes",
+        "regional food stops"
+      ],
+      "selected_variant": "tight",
+      "slug": "spain",
+      "summary": "A route that links Barcelona's beach districts and Seville's food markets captures the broader regional character of Spain. This journey favors food-first city breaks and culture-heavy itineraries, with enough time to settle into each distinct region.",
+      "trip_style_fit": [
+        "food-led city breaks",
+        "culture-first itineraries"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Baja California and Mexico is a country in the southern portion of North America. For travelers it combines huge food cities, archaeological and old-quarter.",
+            "key": "wildlife-days",
+            "label": "wildlife viewing and reserve days",
+            "source": "wikivoyage",
+            "weight": 34
+          },
+          {
+            "category": "anchor",
+            "evidence": "Mexico City and Mexico is a country in the southern portion of North America. For travelers it combines huge food cities, archaeological and old-quarter.",
+            "key": "food-stops",
+            "label": "regional food stops",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Yucatan Coast and Mexico reads best when the trip chooses between a food-and-city sequence, a coast-first break, or a wildlife-and-road route.",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "wikivoyage",
+            "weight": 28
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 4,
+          "featuredDestinationNames": [
+            "Mexico City",
+            "Oaxaca",
+            "Yucatan Coast",
+            "Baja California"
+          ],
+          "publishedDestinationCount": 4,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit|structural-note",
+          "openingFamily": "landscape-reveals",
+          "patternFamily": "multi-region-repeat-trip-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "whale",
+              "destinationName": "Baja California",
+              "featuredRank": 4,
+              "key": "wildlife-days",
+              "label": "Baja California's whale-watching waters",
+              "theme": "wildlife",
+              "weight": 32
+            },
+            {
+              "cueType": "food",
+              "destinationName": "Oaxaca",
+              "featuredRank": 2,
+              "key": "food-stops",
+              "label": "Oaxaca's neighborhood food stops",
+              "theme": "food",
+              "weight": 28
+            },
+            {
+              "cueType": "coastal-region",
+              "destinationName": "Yucatan Coast",
+              "featuredRank": 3,
+              "key": "coastal-islands",
+              "label": "coastal towns along the Yucatan Coast",
+              "theme": "coastal",
+              "weight": 24
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "whale",
+            "destinationName": "Baja California",
+            "featuredRank": 4,
+            "key": "wildlife-days",
+            "label": "Baja California's whale-watching waters",
+            "theme": "wildlife",
+            "weight": 32
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Oaxaca",
+            "featuredRank": 2,
+            "key": "food-stops",
+            "label": "Oaxaca's neighborhood food stops",
+            "theme": "food",
+            "weight": 28
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Mexico City",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "Mexico City's neighborhood food stops",
+            "theme": "food",
+            "weight": 26
+          },
+          {
+            "cueType": "coastal-region",
+            "destinationName": "Yucatan Coast",
+            "featuredRank": 3,
+            "key": "coastal-islands",
+            "label": "coastal towns along the Yucatan Coast",
+            "theme": "coastal",
+            "weight": 24
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "Oaxaca",
+            "featuredRank": 2,
+            "key": "historic-gardens",
+            "label": "Oaxaca's older quarters",
+            "theme": "culture",
+            "weight": 21
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "Baja California",
+            "featuredRank": 4,
+            "key": "coastal-islands",
+            "label": "Baja California's beach districts",
+            "theme": "coastal",
+            "weight": 19
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "October to April",
+          "reason": null,
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "regional food stops and wildlife viewing and reserve days",
+          "key": "drive-first-landscape-route",
+          "label": "drive-first landscape route",
+          "source": "destinations",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "4 published destinations",
+            "key": "first-multi-stop-routes",
+            "label": "first multi-stop routes",
+            "source": "destinations",
+            "weight": 18
+          },
+          {
+            "category": "trip_style",
+            "evidence": "archaeology sites and old quarters",
+            "key": "culture-first-itineraries",
+            "label": "culture-first itineraries",
+            "source": "wikipedia",
+            "weight": 22
+          }
+        ]
+      },
+      "name": "Mexico",
+      "proper_noun_anchors": [
+        "Baja California's whale-watching waters",
+        "Oaxaca's neighborhood food stops",
+        "coastal towns along the Yucatan Coast"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 3,
+          "available_proper_noun_anchor_count": 6,
+          "cadence_signature": "lead|trip-fit|structural-note",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Baja California"
+            },
+            {
+              "count": 1,
+              "name": "Oaxaca"
+            },
+            {
+              "count": 1,
+              "name": "Yucatan Coast"
+            }
+          ],
+          "editorial_pattern": "multi-region-repeat-trip-country",
+          "opening_family": "landscape-reveals",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 3,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 3
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "wildlife viewing and reserve days",
+        "regional food stops",
+        "coastal islands and ferry routes"
+      ],
+      "selected_variant": "full",
+      "slug": "mexico",
+      "summary": "The landscape of Mexico reveals its variety as you travel between Baja California's whale-watching waters, Oaxaca's neighborhood food stops, and coastal towns along the Yucatan Coast. It rewards repeat visits, focusing on discovery in one slice of the country at a time.",
+      "trip_style_fit": [
+        "first multi-stop routes",
+        "culture-first itineraries"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Kruger National Park and South Africa is a country at the southernmost tip of Africa. For travelers it combines city-and-coast breaks, wine-country detours, long.",
+            "key": "savanna-safari",
+            "label": "savanna drives and safari camps",
+            "source": "wikivoyage",
+            "weight": 46
+          },
+          {
+            "category": "anchor",
+            "evidence": "Cape Town and South Africa is a country at the southernmost tip of Africa. For travelers it combines city-and-coast breaks, wine-country detours, long.",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Garden Route and The best timing depends heavily on whether the trip is built around Cape Town weather, safari season, or a longer Garden Route drive.",
+            "key": "historic-gardens",
+            "label": "historic gardens and quieter districts",
+            "source": "destinations",
+            "weight": 24
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 4,
+          "featuredDestinationNames": [
+            "Cape Town",
+            "Kruger National Park",
+            "Winelands",
+            "Garden Route"
+          ],
+          "publishedDestinationCount": 4,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit|structural-note",
+          "openingFamily": "landscape-reveals",
+          "patternFamily": "multi-region-repeat-trip-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "wildlife-park",
+              "destinationName": "Kruger National Park",
+              "featuredRank": 2,
+              "key": "wildlife-days",
+              "label": "Kruger National Park's park-and-wildlife loops",
+              "theme": "wildlife",
+              "weight": 34
+            },
+            {
+              "cueType": "coastal",
+              "destinationName": "Cape Town",
+              "featuredRank": 1,
+              "key": "coastal-islands",
+              "label": "Cape Town's coastal detours",
+              "theme": "coastal",
+              "weight": 28
+            },
+            {
+              "cueType": "food",
+              "destinationName": "Winelands",
+              "featuredRank": 3,
+              "key": "food-stops",
+              "label": "Winelands' neighborhood food stops",
+              "theme": "food",
+              "weight": 22
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "wildlife-park",
+            "destinationName": "Kruger National Park",
+            "featuredRank": 2,
+            "key": "wildlife-days",
+            "label": "Kruger National Park's park-and-wildlife loops",
+            "theme": "wildlife",
+            "weight": 34
+          },
+          {
+            "cueType": "safari",
+            "destinationName": "Kruger National Park",
+            "featuredRank": 2,
+            "key": "savanna-safari",
+            "label": "safari drives around Kruger National Park",
+            "theme": "wildlife",
+            "weight": 31
+          },
+          {
+            "cueType": "wildlife",
+            "destinationName": "Garden Route",
+            "featuredRank": 4,
+            "key": "wildlife-days",
+            "label": "wildlife days around Garden Route",
+            "theme": "wildlife",
+            "weight": 30
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "Cape Town",
+            "featuredRank": 1,
+            "key": "coastal-islands",
+            "label": "Cape Town's coastal detours",
+            "theme": "coastal",
+            "weight": 28
+          },
+          {
+            "cueType": "lagoon",
+            "destinationName": "Garden Route",
+            "featuredRank": 4,
+            "key": "coastal-islands",
+            "label": "Garden Route's lagoon-side wanderings",
+            "theme": "coastal",
+            "weight": 25
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Cape Town",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "Cape Town's food markets",
+            "theme": "food",
+            "weight": 23
+          },
+          {
+            "cueType": "mountain",
+            "destinationName": "Cape Town",
+            "featuredRank": 1,
+            "key": "mountain-routes",
+            "label": "Cape Town's mountain scenery",
+            "theme": "landscape",
+            "weight": 22
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Winelands",
+            "featuredRank": 3,
+            "key": "food-stops",
+            "label": "Winelands' neighborhood food stops",
+            "theme": "food",
+            "weight": 22
+          },
+          {
+            "cueType": "mountain",
+            "destinationName": "Kruger National Park",
+            "featuredRank": 2,
+            "key": "mountain-routes",
+            "label": "Kruger National Park's mountain scenery",
+            "theme": "landscape",
+            "weight": 20
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "Garden Route",
+            "featuredRank": 4,
+            "key": "coastal-islands",
+            "label": "Garden Route's sea-facing stays",
+            "theme": "coastal",
+            "weight": 16
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "October to April",
+          "reason": null,
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "savanna drives and safari camps and coastal islands and ferry routes",
+          "key": "food-and-culture-route",
+          "label": "city-to-city food and culture route",
+          "source": "destinations",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "regional food stops",
+            "key": "food-led-city-breaks",
+            "label": "food-led city breaks",
+            "source": "destinations",
+            "weight": 18
+          },
+          {
+            "category": "trip_style",
+            "evidence": "historic gardens and quieter districts",
+            "key": "culture-first-itineraries",
+            "label": "culture-first itineraries",
+            "source": "destinations",
+            "weight": 22
+          }
+        ]
+      },
+      "name": "South Africa",
+      "proper_noun_anchors": [
+        "Kruger National Park's park-and-wildlife loops",
+        "Cape Town's coastal detours",
+        "Winelands' neighborhood food stops"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 3,
+          "available_proper_noun_anchor_count": 10,
+          "cadence_signature": "lead|trip-fit|structural-note",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Cape Town"
+            },
+            {
+              "count": 1,
+              "name": "Kruger National Park"
+            },
+            {
+              "count": 1,
+              "name": "Winelands"
+            }
+          ],
+          "editorial_pattern": "multi-region-repeat-trip-country",
+          "opening_family": "landscape-reveals",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 3,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 1,
+            "wikipedia": 0,
+            "wikivoyage": 2
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "savanna drives and safari camps",
+        "coastal islands and ferry routes",
+        "historic gardens and quieter districts"
+      ],
+      "selected_variant": "full",
+      "slug": "south-africa",
+      "summary": "The landscape of South Africa reveals its variety as you travel between Kruger National Park's park-and-wildlife loops, Cape Town's coastal detours, and Winelands' neighborhood food stops. It rewards repeat visits, focusing on discovery in one slice of the country at a time.",
+      "trip_style_fit": [
+        "food-led city breaks",
+        "culture-first itineraries"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    },
+    {
+      "classification": "pass",
+      "debug": {
+        "anchors": [
+          {
+            "category": "anchor",
+            "evidence": "Rio de Janeiro and Brazil is a country in South America. For travelers it stretches from major food cities and music-heavy historic centers to beach routes.",
+            "key": "coastal-islands",
+            "label": "coastal islands and ferry routes",
+            "source": "wikivoyage",
+            "weight": 38
+          },
+          {
+            "category": "anchor",
+            "evidence": "Pantanal and Brazil is a country in South America. For travelers it stretches from major food cities and music-heavy historic centers to beach routes.",
+            "key": "wildlife-days",
+            "label": "wildlife viewing and reserve days",
+            "source": "wikivoyage",
+            "weight": 34
+          },
+          {
+            "category": "anchor",
+            "evidence": "Rio de Janeiro and Brazil is a country in South America. For travelers it stretches from major food cities and music-heavy historic centers to beach routes.",
+            "key": "food-stops",
+            "label": "regional food stops",
+            "source": "wikivoyage",
+            "weight": 38
+          }
+        ],
+        "context": {
+          "featuredDestinationCount": 4,
+          "featuredDestinationNames": [
+            "Rio de Janeiro",
+            "Salvador",
+            "Sao Paulo",
+            "Pantanal"
+          ],
+          "publishedDestinationCount": 4,
+          "usedSources": [
+            "wikipedia",
+            "wikivoyage",
+            "destinations",
+            "climate"
+          ]
+        },
+        "editorial": {
+          "cadenceSignature": "lead|trip-fit|structural-note",
+          "openingFamily": "landscape-reveals",
+          "patternFamily": "multi-region-repeat-trip-country",
+          "phraseFamilies": [],
+          "properNounAnchors": [
+            {
+              "cueType": "wildlife",
+              "destinationName": "Pantanal",
+              "featuredRank": 4,
+              "key": "wildlife-days",
+              "label": "wildlife days around Pantanal",
+              "theme": "wildlife",
+              "weight": 30
+            },
+            {
+              "cueType": "coastal",
+              "destinationName": "Rio de Janeiro",
+              "featuredRank": 1,
+              "key": "coastal-islands",
+              "label": "Rio de Janeiro's beach districts",
+              "theme": "coastal",
+              "weight": 28
+            },
+            {
+              "cueType": "food",
+              "destinationName": "Sao Paulo",
+              "featuredRank": 3,
+              "key": "food-stops",
+              "label": "Sao Paulo's neighborhood food stops",
+              "theme": "food",
+              "weight": 22
+            }
+          ]
+        },
+        "named_anchors": [
+          {
+            "cueType": "wildlife",
+            "destinationName": "Pantanal",
+            "featuredRank": 4,
+            "key": "wildlife-days",
+            "label": "wildlife days around Pantanal",
+            "theme": "wildlife",
+            "weight": 30
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "Rio de Janeiro",
+            "featuredRank": 1,
+            "key": "coastal-islands",
+            "label": "Rio de Janeiro's beach districts",
+            "theme": "coastal",
+            "weight": 28
+          },
+          {
+            "cueType": "coastal",
+            "destinationName": "Salvador",
+            "featuredRank": 2,
+            "key": "coastal-islands",
+            "label": "Salvador's waterfront quarters",
+            "theme": "coastal",
+            "weight": 26
+          },
+          {
+            "cueType": "mountain",
+            "destinationName": "Rio de Janeiro",
+            "featuredRank": 1,
+            "key": "mountain-routes",
+            "label": "Rio de Janeiro's alpine base",
+            "theme": "landscape",
+            "weight": 25
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Sao Paulo",
+            "featuredRank": 3,
+            "key": "food-stops",
+            "label": "Sao Paulo's neighborhood food stops",
+            "theme": "food",
+            "weight": 22
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Salvador",
+            "featuredRank": 2,
+            "key": "food-stops",
+            "label": "Salvador's food markets",
+            "theme": "food",
+            "weight": 21
+          },
+          {
+            "cueType": "food",
+            "destinationName": "Rio de Janeiro",
+            "featuredRank": 1,
+            "key": "food-stops",
+            "label": "Rio de Janeiro's neighborhood food stops",
+            "theme": "food",
+            "weight": 20
+          },
+          {
+            "cueType": "historic",
+            "destinationName": "Salvador",
+            "featuredRank": 2,
+            "key": "historic-gardens",
+            "label": "Salvador's historic core",
+            "theme": "culture",
+            "weight": 18
+          }
+        ],
+        "seasonality": {
+          "include": false,
+          "planningLabel": "April to October",
+          "reason": null,
+          "signals": [],
+          "summaryText": null
+        },
+        "travel_identity": {
+          "category": "identity",
+          "evidence": "regional food stops and coastal islands and ferry routes",
+          "key": "drive-first-landscape-route",
+          "label": "drive-first landscape route",
+          "source": "destinations",
+          "weight": 24
+        },
+        "trip_styles": [
+          {
+            "category": "trip_style",
+            "evidence": "coastal islands and ferry routes, wildlife viewing and reserve days, and mountain routes and alpine scenery",
+            "key": "outdoor-heavy-routes",
+            "label": "outdoor-heavy routes",
+            "source": "wikivoyage",
+            "weight": 18
+          },
+          {
+            "category": "trip_style",
+            "evidence": "4 published destinations",
+            "key": "first-multi-stop-routes",
+            "label": "first multi-stop routes",
+            "source": "destinations",
+            "weight": 18
+          }
+        ]
+      },
+      "name": "Brazil",
+      "proper_noun_anchors": [
+        "wildlife days around Pantanal",
+        "Rio de Janeiro's beach districts",
+        "Sao Paulo's neighborhood food stops"
+      ],
+      "review": {
+        "classification": "pass",
+        "issues": [],
+        "metrics": {
+          "anchor_count": 3,
+          "available_proper_noun_anchor_count": 8,
+          "cadence_signature": "lead|trip-fit|structural-note",
+          "destination_mentions": [
+            {
+              "count": 1,
+              "name": "Pantanal"
+            },
+            {
+              "count": 1,
+              "name": "Rio de Janeiro"
+            },
+            {
+              "count": 1,
+              "name": "Sao Paulo"
+            }
+          ],
+          "editorial_pattern": "multi-region-repeat-trip-country",
+          "opening_family": "landscape-reveals",
+          "phrase_families": [],
+          "proper_noun_anchor_count": 3,
+          "source_counts": {
+            "climate": 0,
+            "destinations": 0,
+            "wikipedia": 0,
+            "wikivoyage": 3
+          },
+          "trip_style_count": 2
+        }
+      },
+      "score": {
+        "differentiation": 10,
+        "overall": 9,
+        "specificity": 10,
+        "traveler_usefulness": 7
+      },
+      "seasonality": null,
+      "selected_anchors": [
+        "coastal islands and ferry routes",
+        "wildlife viewing and reserve days",
+        "regional food stops"
+      ],
+      "selected_variant": "full",
+      "slug": "brazil",
+      "summary": "The landscape of Brazil reveals its variety as you travel between wildlife days around Pantanal, Rio de Janeiro's beach districts, and Sao Paulo's neighborhood food stops. This trip favors longer itineraries, with enough time to settle into each distinct region.",
+      "trip_style_fit": [
+        "outdoor-heavy routes",
+        "first multi-stop routes"
+      ],
+      "validation": {
+        "errors": [],
+        "is_valid": true,
+        "matched_banned_phrases": [],
+        "warnings": []
+      }
+    }
+  ],
+  "fixture_count": 17,
+  "generated_by": "country-summary-fixture-harness",
+  "suite_review": {
+    "repeated_cadence_signatures": [],
+    "repeated_opening_structures": [],
+    "repeated_phrase_families": [],
+    "swappable_fingerprints": []
+  }
+}

@@ -1,0 +1,43 @@
+name: Country Summary QA
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  country-summary-qa:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Regenerate country summary fixture report
+        run: npm run qa:country-summaries
+
+      - name: Verify country summary fixture report
+        run: npm run qa:country-summaries:verify
+
+      - name: Ensure committed report is up to date
+        run: |
+          if [[ -n "$(git status --short --untracked-files=all -- qa/country-summary-report.json)" ]]; then
+            echo "qa/country-summary-report.json is missing or out of date."
+            echo "Run npm run qa:country-summaries and commit the updated report."
+            git status --short --untracked-files=all -- qa/country-summary-report.json
+            exit 1
+          fi
+
+      - name: Build application
+        run: npm run build
