@@ -12,6 +12,11 @@ const modeCopy = {
     title: 'Start saving destinations for later',
     submitLabel: 'Create account',
   },
+  resetPassword: {
+    eyebrow: 'Reset password',
+    title: 'Send yourself a secure password reset link',
+    submitLabel: 'Send Reset Link',
+  },
 };
 
 export function AuthFormCard({
@@ -24,8 +29,10 @@ export function AuthFormCard({
   errorMessage,
   statusMessage,
   isConfigured,
+  onForgotPassword,
 }) {
   const copy = modeCopy[mode];
+  const isResetMode = mode === 'resetPassword';
 
   return (
     <section className="rounded-[1.75rem] border border-ink/10 bg-white/80 p-6 shadow-soft">
@@ -62,10 +69,6 @@ export function AuthFormCard({
           description="Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` before using email/password authentication."
           tone="error"
         />
-      ) : null}
-
-      {errorMessage ? (
-        <StatusPanel className="mt-6" title="Authentication failed" description={errorMessage} tone="error" />
       ) : null}
 
       {statusMessage ? (
@@ -105,25 +108,70 @@ export function AuthFormCard({
           />
         </div>
 
-        <div>
-          <label className="text-sm font-medium text-ink/80" htmlFor="auth-password">
-            Password
-          </label>
-          <input
-            autoComplete={mode === 'signIn' ? 'current-password' : 'new-password'}
-            id="auth-password"
-            className="mt-2 w-full rounded-[1.1rem] border border-ink/10 bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink/35 focus:border-lagoon/30 focus:ring-2 focus:ring-lagoon/15"
-            name="password"
-            onChange={onChange}
-            placeholder="At least 6 characters"
-            type="password"
-            value={values.password}
-          />
+        {!isResetMode ? (
+          <div>
+            <div className="flex items-center justify-between gap-3">
+              <label className="text-sm font-medium text-ink/80" htmlFor="auth-password">
+                Password
+              </label>
+              {mode === 'signIn' ? (
+                <button
+                  className="text-xs font-medium text-lagoon transition hover:text-ink"
+                  onClick={onForgotPassword}
+                  type="button"
+                >
+                  Forgot password?
+                </button>
+              ) : null}
+            </div>
+            <input
+              autoComplete={mode === 'signIn' ? 'current-password' : 'new-password'}
+              id="auth-password"
+              className="mt-2 w-full rounded-[1.1rem] border border-ink/10 bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink/35 focus:border-lagoon/30 focus:ring-2 focus:ring-lagoon/15"
+              name="password"
+              onChange={onChange}
+              placeholder="At least 6 characters"
+              type="password"
+              value={values.password}
+            />
+          </div>
+        ) : null}
+
+        {mode === 'signUp' ? (
+          <div>
+            <label className="text-sm font-medium text-ink/80" htmlFor="auth-confirm-password">
+              Confirm Password
+            </label>
+            <input
+              autoComplete="new-password"
+              id="auth-confirm-password"
+              className="mt-2 w-full rounded-[1.1rem] border border-ink/10 bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink/35 focus:border-lagoon/30 focus:ring-2 focus:ring-lagoon/15"
+              name="confirmPassword"
+              onChange={onChange}
+              placeholder="Re-enter your password"
+              type="password"
+              value={values.confirmPassword}
+            />
+          </div>
+        ) : null}
+
+        <div className="min-h-[1.25rem]">
+          {errorMessage ? <p className="text-sm text-coral">{errorMessage}</p> : null}
         </div>
 
         <Button className="w-full" disabled={isSubmitting || !isConfigured} size="lg" type="submit">
           {isSubmitting ? 'Submitting...' : copy.submitLabel}
         </Button>
+
+        {isResetMode ? (
+          <button
+            className="text-sm font-medium text-ink/65 transition hover:text-ink"
+            onClick={() => onModeChange('signIn')}
+            type="button"
+          >
+            Back to sign in
+          </button>
+        ) : null}
       </form>
     </section>
   );

@@ -1,6 +1,9 @@
 import { Link, useParams } from 'react-router-dom';
 import { CountryHero } from '../components/country/CountryHero';
+import { CountryQuickFacts } from '../components/country/CountryQuickFacts';
 import { CountryPageSkeleton } from '../components/country/CountryPageSkeleton';
+import { ReviewFormSection } from '../components/reviews/ReviewFormSection';
+import { TravelerInsightsSection } from '../components/reviews/TravelerInsightsSection';
 import { DestinationCard } from '../components/ui/DestinationCard';
 import { EmptyState } from '../components/ui/EmptyState';
 import { buttonVariants } from '../components/ui/Button';
@@ -9,6 +12,7 @@ import { SectionHeading } from '../components/ui/SectionHeading';
 import { StatusPanel } from '../components/ui/StatusPanel';
 import { useAsyncResource } from '../hooks/useAsyncResource';
 import { countriesService } from '../services/countriesService';
+import { reviewsService } from '../services/reviewsService';
 
 export function CountryPage() {
   const { slug = '' } = useParams();
@@ -38,30 +42,27 @@ export function CountryPage() {
   return (
     <PageContainer className="space-y-10">
       <CountryHero country={data} />
+      <CountryQuickFacts quickFacts={data.quickFacts} />
 
       <div className="grid gap-6 xl:grid-cols-[1.02fr,0.98fr]">
         <section className="space-y-8">
           <SectionHeading
             eyebrow="Country overview"
-            title={`How to use ${data.name} as a planning starting point`}
-            description="Country pages stay qualitative. They summarize the current curated coverage and point you toward destination-level profiles instead of pretending one climate pattern fits the whole country."
+            title={`Why Visit ${data.name}`}
           />
 
-          <article className="rounded-[1.75rem] border border-ink/10 bg-white/80 p-6 shadow-soft">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-lagoon">Travel planning lens</p>
-            <p className="mt-5 text-base leading-8 text-ink/75">{data.climateGuidance}</p>
-          </article>
+          <div className="max-w-3xl">
+            <p className="text-lg leading-9 text-ink/78">{data.climateGuidance}</p>
+          </div>
         </section>
 
         <section className="space-y-8">
           <SectionHeading
             eyebrow="Coverage"
-            title="What this country page currently includes"
-            description="As the backend catalog grows, this page can deepen through more curated destinations and editorial country content without moving business logic into React."
+            title={`Explore ${data.name}`}
           />
 
           <article className="rounded-[1.75rem] border border-ink/10 bg-white/80 p-6 shadow-soft">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-lagoon">Current foundation</p>
             <dl className="mt-5 grid gap-5">
               {data.overviewItems.map((item) => (
                 <div key={item.label} className="rounded-[1.25rem] bg-sand/55 p-4">
@@ -78,13 +79,17 @@ export function CountryPage() {
         <SectionHeading
           eyebrow="Featured destinations"
           title={`Curated places to compare within ${data.name}`}
-          description="These cards give the country page a destination-led foundation. They keep seasonal and climate guidance anchored to real destination records instead of a fake country-wide forecast."
+          description={`Explore our hand-picked locations across ${data.name}, complete with detailed seasonal data to help you time your perfect trip.`}
         />
 
         {data.featuredDestinations.length > 0 ? (
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid items-stretch gap-6 lg:grid-cols-3">
             {data.featuredDestinations.map((destination) => (
-              <DestinationCard key={destination.slug} destination={destination} />
+              <DestinationCard
+                key={destination.slug}
+                destination={destination}
+                photoUrl={destination.heroImageSourceUrl}
+              />
             ))}
           </div>
         ) : (
@@ -94,6 +99,16 @@ export function CountryPage() {
           />
         )}
       </section>
+
+      <TravelerInsightsSection entityLabel={data.name} reviews={data.reviews ?? []} />
+      <ReviewFormSection
+        entityLabel={data.name}
+        monthOptions={reviewsService.monthOptions}
+        onSubmit={(review) => reviewsService.submitCountryReview({
+          ...review,
+          countryId: data.countryId,
+        })}
+      />
     </PageContainer>
   );
 }

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
+import { FavoriteHeartButton } from '../components/favorites/FavoriteHeartButton';
 import { FavoritesGridSkeleton } from '../components/favorites/FavoritesGridSkeleton';
-import { Button, buttonVariants } from '../components/ui/Button';
+import { buttonVariants } from '../components/ui/Button';
 import { DestinationCard } from '../components/ui/DestinationCard';
 import { EmptyState } from '../components/ui/EmptyState';
 import { PageContainer } from '../components/ui/PageContainer';
@@ -119,20 +120,21 @@ export function FavoritesPage() {
             </Link>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {favorites.map((destination) => (
               <DestinationCard
                 key={destination.id}
                 destination={destination}
-                footerAction={
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    disabled={isRemovingFavorite(destination.id)}
-                    onClick={() => removeFavorite(destination.id)}
-                  >
-                    {isRemovingFavorite(destination.id) ? 'Removing' : 'Remove'}
-                  </Button>
+                photoUrl={destination.heroImageSourceUrl}
+                topRightAction={
+                  <FavoriteHeartButton
+                    className="rounded-full bg-white/20 p-2 backdrop-blur-md hover:bg-white/30"
+                    isAuthLoading={false}
+                    isFavorited
+                    isLoading={false}
+                    isSaving={isRemovingFavorite(destination.id)}
+                    onToggle={() => removeFavorite(destination.id)}
+                  />
                 }
               />
             ))}

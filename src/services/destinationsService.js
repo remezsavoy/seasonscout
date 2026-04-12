@@ -1,9 +1,18 @@
 import { hasSupabaseClient } from '../lib/supabaseClient';
-import { fetchDestinationRowBySlug, fetchFeaturedDestinationRows, fetchMonthlyClimateRows, searchDestinationRows } from './destinationDataSource';
+import {
+  fetchAllPublishedDestinationRows,
+  fetchDestinationRowBySlug,
+  fetchDestinationsByCollection,
+  fetchExploreCalendarDestinationRows,
+  fetchFeaturedDestinationRows,
+  fetchMonthlyClimateRows,
+  searchDestinationRows,
+} from './destinationDataSource';
 import { homeContentService } from './homeContentService';
-import { mapDestinationRowToCard, mapDestinationRowToPage } from './destinationMappers';
+import { mapDestinationRowToCard, mapDestinationRowToExploreCalendarCard, mapDestinationRowToPage } from './destinationMappers';
 import { climateService } from './climateService';
 import { homeHeroContentFallback, seasonalCollections, destinationShells, featuredDestinations } from './mockData';
+import { reviewsService } from './reviewsService';
 import { weatherService } from './weatherService';
 
 function withLatency(data) {
@@ -59,12 +68,16 @@ export const destinationsService = {
   async getDestinationPageData(slug) {
     if (hasSupabaseClient()) {
       const destination = await fetchDestinationRowBySlug(slug);
-      const [climateRows, weatherPreview] = await Promise.all([
+      const [climateRows, weatherPreview, reviews] = await Promise.all([
         fetchMonthlyClimateRows(destination.id),
         weatherService.getWeatherPreview(slug, { destination }),
+        reviewsService.getApprovedDestinationReviews(destination.id),
       ]);
 
-      return mapDestinationRowToPage(destination, climateRows, weatherPreview);
+      return {
+        ...mapDestinationRowToPage(destination, climateRows, weatherPreview),
+        reviews,
+      };
     }
 
     const destination = destinationShells[slug];
@@ -78,6 +91,56 @@ export const destinationsService = {
       weatherService.getWeatherPreview(slug, { destination }),
     ]);
 
-    return mapDestinationRowToPage(destination, climateRows, weatherPreview);
+    return {
+      ...mapDestinationRowToPage(destination, climateRows, weatherPreview),
+      reviews: [],
+    };
+  },
+
+  async getDestinationsByCollection(collectionTags) {
+    if (hasSupabaseClient()) {
+      const rows = await fetchDestinationsByCollection(collectionTags);
+
+      return rows.map(mapDestinationRowToCard);
+    }
+
+    const normalizedTags = Array.isArray(collectionTags) ? collectionTags : [collectionTags];
+    const activeTags = normalizedTags.filter(Boolean);
+
+    if (activeTags.length === 0) {
+      return withLatency(featuredDestinations);
+    }
+
+    return withLatency(
+      featuredDestinations.filter((destination) =>
+        activeTags.some((tag) => destination.collection_tags?.includes(tag)),
+      ),
+    );
+  },
+
+  async getAllDestinations() {
+    if (hasSupabaseClient()) {
+      const rows = await fetchAllPublishedDestinationRows();
+      return rows.map(mapDestinationRowToCard);
+    }
+
+    return withLatency(featuredDestinations);
+  },
+
+  async getExploreCalendarData() {
+    if (hasSupabaseClient()) {
+      const rows = await fetchExploreCalendarDestinationRows();
+
+      return rows.map(mapDestinationRowToExploreCalendarCard);
+    }
+
+    return withLatency(
+      Object.values(destinationShells).map((destination) =>
+        mapDestinationRowToExploreCalendarCard({
+          ...destination,
+          peak_season: destination.best_months?.length ? 'Apr-May' : '',
+        }),
+      ),
+    );
   },
 };

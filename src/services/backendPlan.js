@@ -15,12 +15,8 @@ export const backendPlan = {
   ],
   edgeFunctions: [
     {
-      name: 'refresh-destination-weather-cache',
-      purpose: 'Fetch, normalize, and cache live weather data from Open-Meteo behind server-side controls.',
-    },
-    {
-      name: 'enrich-destination',
-      purpose: 'Orchestrate third-party summary and image enrichment without exposing secrets to the browser.',
+      name: 'compose-country-full',
+      purpose: 'Compose a full country package server-side, including editorial generation, destination discovery, imagery, and climate import.',
     },
   ],
   frontendResponsibilities: [

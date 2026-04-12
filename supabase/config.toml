@@ -1,0 +1,5 @@
+[functions.compose-country-full]
+verify_jwt = false
+
+[functions.admin-unsplash-picker]
+verify_jwt = false

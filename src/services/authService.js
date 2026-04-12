@@ -70,6 +70,19 @@ export const authService = {
     return data;
   },
 
+  async sendPasswordResetEmail(email) {
+    const supabase = requireAuthClient();
+    const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/update-password`,
+    });
+
+    if (error) {
+      throw createSupabaseServiceError('Unable to send the password reset email.', error);
+    }
+
+    return data;
+  },
+
   async signOut() {
     if (!hasSupabaseClient()) {
       return null;
@@ -83,6 +96,32 @@ export const authService = {
     }
 
     return null;
+  },
+
+  async updateProfile({ displayName }) {
+    const supabase = requireAuthClient();
+    const { data, error } = await supabase.auth.updateUser({
+      data: {
+        display_name: displayName,
+      },
+    });
+
+    if (error) {
+      throw createSupabaseServiceError('Unable to update the profile.', error);
+    }
+
+    return data;
+  },
+
+  async updatePassword(password) {
+    const supabase = requireAuthClient();
+    const { data, error } = await supabase.auth.updateUser({ password });
+
+    if (error) {
+      throw createSupabaseServiceError('Unable to update the password.', error);
+    }
+
+    return data;
   },
 
   async getAuthCapabilities() {

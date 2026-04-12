@@ -53,3 +53,14 @@ ehthumbs.db
 # Local project artifacts
 .cache/
 backups/
+
+# Ignore all Markdown files (prompts, notes, etc.)
+*.md
+
+# EXCEPT the main README
+!README.md
+
+# Ignore archives
+*.zip
+*.rar
+*.7z

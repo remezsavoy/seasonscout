@@ -15,7 +15,6 @@ export function MonthlyClimateTable({ rows, climateSource }) {
       <SectionHeading
         eyebrow="Monthly climate"
         title="Averages across the full year"
-        description="Stored monthly climate rows give the route a stable long-term planning view, separate from dynamic live weather data."
       />
 
       <div className="rounded-[1.75rem] border border-ink/10 bg-white/80 p-4 shadow-soft sm:p-6">

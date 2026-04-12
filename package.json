@@ -6,8 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "qa:country-summaries": "node scripts/run-country-summary-fixtures.mjs",
-    "qa:country-summaries:verify": "node scripts/verify-country-summary-report.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

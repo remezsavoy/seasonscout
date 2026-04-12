@@ -12,6 +12,7 @@ const destinationFields = [
   'longitude',
   'timezone',
   'summary',
+  'collection_tags',
   'hero_image_url',
   'hero_image_source_name',
   'hero_image_source_url',
@@ -19,6 +20,8 @@ const destinationFields = [
   'hero_image_attribution_url',
   'best_months',
   'travel_tags',
+  'top_landmarks',
+  'peak_season',
   'seasonal_insight',
   'featured_rank',
   'is_published',
@@ -115,6 +118,70 @@ export async function fetchDestinationRowBySlug(slug) {
   }
 
   return data;
+}
+
+export async function fetchExploreCalendarDestinationRows() {
+  const client = requireSupabaseClient();
+
+  return runQuery(
+    client
+      .from('destinations')
+      .select(destinationFields)
+      .eq('is_published', true)
+      .eq('enrichment_status', 'enriched')
+      .order('name', { ascending: true }),
+    'Unable to load explore calendar destinations.',
+  );
+}
+
+export async function fetchAllPublishedDestinationRows(limit = 60) {
+  const client = requireSupabaseClient();
+
+  return runQuery(
+    client
+      .from('destinations')
+      .select(destinationFields)
+      .eq('is_published', true)
+      .order('featured_rank', { ascending: true, nullsFirst: false })
+      .order('name', { ascending: true })
+      .limit(limit),
+    'Unable to load published destinations.',
+  );
+}
+
+function normalizeCollectionTags(collectionTags) {
+  const values = Array.isArray(collectionTags) ? collectionTags : [collectionTags];
+
+  return [...new Set(
+    values
+      .map((value) => String(value ?? '').trim())
+      .filter(Boolean),
+  )];
+}
+
+export async function fetchDestinationsByCollection(collectionTags, limit = 24) {
+  const client = requireSupabaseClient();
+  const normalizedTags = normalizeCollectionTags(collectionTags);
+
+  if (normalizedTags.length === 0) {
+    return fetchAllPublishedDestinationRows(limit);
+  }
+
+  let query = client
+    .from('destinations')
+    .select(destinationFields)
+    .eq('is_published', true);
+
+  query = normalizedTags.length === 1
+    ? query.contains('collection_tags', [normalizedTags[0]])
+    : query.overlaps('collection_tags', normalizedTags);
+
+  return runQuery(
+    query
+      .order('name', { ascending: true })
+      .limit(limit),
+    `Unable to load destinations for collection: ${normalizedTags.join(', ')}`,
+  );
 }
 
 export async function fetchMonthlyClimateRows(destinationId) {

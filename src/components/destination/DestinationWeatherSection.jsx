@@ -12,7 +12,6 @@ export function DestinationWeatherSection({
       <SectionHeading
         eyebrow="Live weather"
         title="Current conditions and the next few days"
-        description="This route consumes a normalized weather shape from the service layer so live provider changes stay outside the UI."
       />
 
       <div className="grid gap-6 xl:grid-cols-[0.9fr,1.1fr]">

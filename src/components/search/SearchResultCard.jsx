@@ -8,7 +8,16 @@ export function SearchResultCard({ result }) {
     >
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-lagoon">{result.typeLabel}</p>
+          <span
+            className={[
+              'inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em]',
+              result.type === 'country'
+                ? 'bg-sand/60 text-ink/72'
+                : 'bg-lagoon/10 text-lagoon',
+            ].join(' ')}
+          >
+            {result.typeLabel}
+          </span>
           <h3 className="mt-3 text-2xl font-semibold text-ink">{result.name}</h3>
           <p className="mt-2 text-sm text-ink/58">{result.subtitle}</p>
         </div>

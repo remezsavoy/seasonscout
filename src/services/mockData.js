@@ -10,6 +10,9 @@ export const featuredDestinations = [
     bestWindow: 'April to May',
     climateCue: 'Mild days, lighter rain',
     tags: ['Temples', 'Culture', 'Walkable'],
+    collection_tags: ['city-break', 'culture-history', 'food-capital'],
+    hero_image_url: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1600&q=80',
+    hero_image_source_url: 'https://unsplash.com/photos/brown-temple-surrounded-by-trees-during-daytime-h0u3F5f4pAs',
   },
   {
     slug: 'cape-town',
@@ -20,6 +23,9 @@ export const featuredDestinations = [
     bestWindow: 'November to March',
     climateCue: 'Dry, breezy warmth',
     tags: ['Coast', 'Hiking', 'Food'],
+    collection_tags: ['city-break', 'adventure-active', 'food-capital', 'nature-wildlife'],
+    hero_image_url: 'https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?auto=format&fit=crop&w=1600&q=80',
+    hero_image_source_url: 'https://unsplash.com/photos/table-mountain-south-africa-W9p9t6vX-G8',
   },
   {
     slug: 'reykjavik',
@@ -30,21 +36,27 @@ export const featuredDestinations = [
     bestWindow: 'June to August',
     climateCue: 'Long daylight, cool air',
     tags: ['Nature', 'Design', 'Road trips'],
+    collection_tags: ['city-break', 'nature-wildlife', 'adventure-active', 'mild-summer'],
+    hero_image_url: 'https://images.unsplash.com/photo-1504893524553-b855bce32c67?auto=format&fit=crop&w=1600&q=80',
+    hero_image_source_url: 'https://unsplash.com/photos/mountain-near-body-of-water-under-blue-sky-during-daytime-7M9S-X-Y-uM',
   },
 ];
 
 export const seasonalCollections = [
   {
     title: 'Low-rainfall city breaks',
-    description: 'Planned backend filtering will surface shoulder-season cities with better walking conditions.',
+    collection: 'city-break',
+    description: 'Discover vibrant cities with dry, comfortable conditions perfect for endless walking and exploration.',
   },
   {
     title: 'Warm winter sun',
-    description: 'Phase 2 browse flows can rank destinations by comfort score, humidity, and rainfall tradeoffs.',
+    collection: 'winter-sun',
+    description: 'Escape the cold with destinations offering perfect beach weather and mild temperatures during the winter months.',
   },
   {
     title: 'Mild summer escapes',
-    description: 'Climate-aware discovery will stay backend-driven so ranking logic is consistent across the app.',
+    collection: 'mild-summer',
+    description: 'Beat the extreme heat in locations that offer refreshing breezes and comfortable outdoor adventures.',
   },
 ];
 
@@ -63,8 +75,11 @@ export const destinationShells = {
       'Kyoto balances temple districts, garden walks, and neighborhood cafes with a climate profile that rewards shoulder-season travel over the humid summer peak.',
     hero_image_url:
       'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1600&q=80',
+    hero_image_source_url:
+      'https://unsplash.com/photos/brown-temple-surrounded-by-trees-during-daytime-h0u3F5f4pAs',
     best_months: [4, 5, 10, 11],
     travel_tags: ['Historic', 'Walkable', 'Food', 'Gardens'],
+    collection_tags: ['city-break', 'culture-history', 'food-capital'],
     seasonal_insight:
       'Spring and autumn create Kyoto\'s strongest balance of comfortable temperatures, lower humidity, and easier all-day walking through temple districts and gardens.',
   },
@@ -82,8 +97,11 @@ export const destinationShells = {
       'Cape Town combines mountain scenery, urban dining, and Atlantic beaches. It performs best when the dry season supports hikes, scenic drives, and long sunset-heavy afternoons.',
     hero_image_url:
       'https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?auto=format&fit=crop&w=1600&q=80',
+    hero_image_source_url:
+      'https://unsplash.com/photos/table-mountain-south-africa-W9p9t6vX-G8',
     best_months: [11, 12, 1, 2, 3],
     travel_tags: ['Coast', 'Hiking', 'Wine', 'Scenic drives'],
+    collection_tags: ['city-break', 'adventure-active', 'food-capital', 'nature-wildlife'],
     seasonal_insight:
       'Cape Town\'s warm-season window works best for travelers who want beach time, outdoor dining, and reliable hiking conditions without winter rainfall interrupting plans.',
   },
@@ -101,8 +119,11 @@ export const destinationShells = {
       'Reykjavik works as a launch point for road trips, geothermal stops, and design-forward city breaks. The best travel window depends on daylight length, wind tolerance, and access to surrounding landscapes.',
     hero_image_url:
       'https://images.unsplash.com/photo-1504893524553-b855bce32c67?auto=format&fit=crop&w=1600&q=80',
+    hero_image_source_url:
+      'https://unsplash.com/photos/mountain-near-body-of-water-under-blue-sky-during-daytime-7M9S-X-Y-uM',
     best_months: [6, 7, 8, 9],
     travel_tags: ['Nature', 'Road trips', 'Northern lights', 'Hot springs'],
+    collection_tags: ['city-break', 'nature-wildlife', 'adventure-active', 'mild-summer'],
     seasonal_insight:
       'Reykjavik performs best when long daylight stretches make road-trip days easier and milder temperatures reduce the friction of exposed, wind-heavy sightseeing.',
   },
@@ -116,6 +137,7 @@ export const countryShells = {
     continent: 'Asia',
     summary:
       'A first trip to Japan makes the most sense when it threads through Kyoto\'s shrine-and-temple quarters, Hakone\'s hot-spring inns, and Tokyo\'s city neighborhoods. It suits travelers who care about old quarters and headline sights, but still want the food and street life to matter. With Kyoto high on the list, planning for spring and autumn is the safer bet.',
+    collection_tags: ['city-break', 'culture-history', 'food-capital', 'year-round'],
     hero_image_url: null,
     seasonal_overview:
       'Use destination-level profiles across Japan rather than one national climate label. Kyoto, Tokyo, and northern or coastal regions can feel very different across the same month.',
@@ -128,6 +150,7 @@ export const countryShells = {
     continent: 'Africa',
     summary:
       'South Africa mixes coastal cities, wine regions, and inland landscapes, so the strongest travel window changes by region and trip style.',
+    collection_tags: ['city-break', 'adventure-active', 'food-capital', 'nature-wildlife', 'winter-sun'],
     hero_image_url: null,
     seasonal_overview:
       'Plan South Africa destination by destination. Cape Town, the Garden Route, and inland safari regions do not share one simple climate pattern.',
@@ -140,6 +163,7 @@ export const countryShells = {
     continent: 'Europe',
     summary:
       'Iceland works best as a destination-led country guide, with daylight length, road conditions, and exposed weather shaping trip quality more than a single temperature average.',
+    collection_tags: ['nature-wildlife', 'adventure-active', 'mild-summer', 'backpacking-budget'],
     hero_image_url: null,
     seasonal_overview:
       'Use featured destinations and route plans to compare Iceland travel timing. Daylight, wind, and access conditions matter as much as average temperatures.',

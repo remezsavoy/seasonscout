@@ -1,26 +1,30 @@
 import { cn } from '../../lib/cn';
+import {
+  sharedHeroImageBaseClassName,
+  sharedHeroImageContainerClassName,
+  sharedHeroImageFallbackClassName,
+  sharedHeroImageOverlayClassName,
+} from '../ui/heroImageStyles';
 import { HeroImageAttribution } from '../ui/HeroImageAttribution';
 
 export function CountryHero({ country }) {
   const backgroundStyle = country.heroImageUrl
     ? {
-        backgroundImage: `linear-gradient(120deg, rgba(16, 32, 51, 0.9), rgba(16, 32, 51, 0.42)), url(${country.heroImageUrl})`,
+        backgroundImage: `url(${country.heroImageUrl})`,
       }
     : undefined;
 
   return (
     <div className="space-y-3">
-      <section className="relative overflow-hidden rounded-[2.25rem] shadow-soft">
+      <section className={sharedHeroImageContainerClassName}>
         <div
           className={cn(
-            'absolute inset-0 bg-cover bg-center',
-            country.heroImageUrl
-              ? 'bg-cover bg-center'
-              : 'bg-[radial-gradient(circle_at_top_left,_rgba(244,201,139,0.28),_transparent_28%),linear-gradient(135deg,_#17344a_0%,_#102033_48%,_#2d6f6d_100%)]',
+            sharedHeroImageBaseClassName,
+            country.heroImageUrl ? null : sharedHeroImageFallbackClassName,
           )}
           style={backgroundStyle}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/58 via-ink/32 to-transparent" />
+        <div className={sharedHeroImageOverlayClassName} />
 
         <div className="relative grid gap-10 px-6 py-8 text-white sm:px-8 sm:py-10 lg:grid-cols-[1.08fr,0.92fr] lg:px-12 lg:py-14">
           <div className="max-w-3xl">

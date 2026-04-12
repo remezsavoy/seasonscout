@@ -21,6 +21,56 @@ function toArray(values) {
   return Array.isArray(values) ? values.filter(Boolean) : [];
 }
 
+function normalizeLandmark(item) {
+  if (typeof item === 'string') {
+    const trimmedName = item.trim();
+
+    if (!trimmedName) {
+      return null;
+    }
+
+    return {
+      name: trimmedName,
+      description: '',
+    };
+  }
+
+  if (!item || typeof item !== 'object' || Array.isArray(item)) {
+    return null;
+  }
+
+  const name = typeof item.name === 'string' ? item.name.trim() : '';
+  const description = typeof item.description === 'string' ? item.description.trim() : '';
+
+  if (!name) {
+    return null;
+  }
+
+  return {
+    name,
+    description,
+  };
+}
+
+function normalizeLandmarks(values) {
+  return toArray(values)
+    .map(normalizeLandmark)
+    .filter(Boolean)
+    .slice(0, 4);
+}
+
+function formatCountryName(value) {
+  if (!value || typeof value !== 'string') {
+    return '';
+  }
+
+  return value
+    .trim()
+    .split(/\s+/)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+    .join(' ');
+}
+
 function normalizeMonthNumbers(values) {
   return [...new Set(
     toArray(values)
@@ -165,8 +215,8 @@ function buildClimateCue(monthNumbers) {
 }
 
 function buildHeadline(destination) {
-  if (destination.seasonal_insight) {
-    return destination.seasonal_insight;
+  if (destination.summary) {
+    return destination.summary;
   }
 
   const bestWindow = formatMonthRange(destination.best_months);
@@ -306,11 +356,32 @@ export function mapDestinationRowToCard(destination) {
   return {
     slug: destination.slug,
     name: destination.name,
-    country: destination.country,
+    country: formatCountryName(destination.country),
     region: destination.continent || 'Featured destination',
     summary: destination.summary || 'Climate and seasonal travel guidance available.',
     bestWindow: formatBestMonthsLabel(bestMonthNumbers),
     climateCue: buildClimateCue(bestMonthNumbers),
+    tags: toArray(destination.travel_tags).slice(0, 3),
+    collectionTags: toArray(destination.collection_tags),
+    heroImageUrl: destination.hero_image_url || null,
+    heroImageAttribution: buildHeroImageAttribution(destination),
+    heroImageSourceUrl: destination.hero_image_url ? destination.hero_image_source_url : null,
+  };
+}
+
+export function mapDestinationRowToExploreCalendarCard(destination) {
+  const bestMonthNumbers = normalizeMonthNumbers(destination.best_months);
+
+  return {
+    id: destination.id ?? destination.slug,
+    slug: destination.slug,
+    name: destination.name,
+    country: formatCountryName(destination.country),
+    continent: destination.continent || 'Other',
+    heroImageUrl: destination.hero_image_url || null,
+    collectionTags: toArray(destination.collection_tags),
+    bestMonths: bestMonthNumbers,
+    peakSeason: typeof destination.peak_season === 'string' ? destination.peak_season.trim() : '',
     tags: toArray(destination.travel_tags).slice(0, 3),
   };
 }
@@ -392,7 +463,7 @@ export function mapDestinationRowToPage(destination, climateRows, weatherPreview
     id: destination.id ?? destination.slug,
     slug: destination.slug,
     name: destination.name,
-    country: destination.country,
+    country: formatCountryName(destination.country),
     continent: destination.continent || '',
     timezone: destination.timezone,
     summary: destination.summary || 'Climate and destination details are available for this location.',
@@ -403,6 +474,9 @@ export function mapDestinationRowToPage(destination, climateRows, weatherPreview
     bestMonths: mapBestMonthNumbersToNames(bestMonthNumbers),
     bestMonthsLabel: formatBestMonthsLabel(bestMonthNumbers),
     bestMonthsDescription: buildBestMonthsDescription(destination, climateRows),
+    peakSeason: destination.peak_season || '',
+    collectionTags: toArray(destination.collection_tags),
+    topLandmarks: normalizeLandmarks(destination.top_landmarks),
     travelTags: toArray(destination.travel_tags),
     headline: buildHeadline(destination),
     climateHighlights: mapClimateRowsToPreview(climateRows, destination),

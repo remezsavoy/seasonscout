@@ -1,11 +1,16 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { AppShell } from '../layouts/AppShell';
+import { AdminPage } from '../pages/AdminPage';
 import { AuthPage } from '../pages/AuthPage';
 import { CountryPage } from '../pages/CountryPage';
 import { DestinationPage } from '../pages/DestinationPage';
+import { ExplorePage } from '../pages/ExplorePage';
+import { ExploreCalendar } from '../pages/ExploreCalendar';
 import { FavoritesPage } from '../pages/FavoritesPage';
 import { HomePage } from '../pages/HomePage';
 import { NotFoundPage } from '../pages/NotFoundPage';
+import { ReviewsAdminPage } from '../pages/ReviewsAdminPage';
+import { UpdatePasswordPage } from '../pages/UpdatePasswordPage';
 
 export const router = createBrowserRouter([
   {
@@ -21,7 +26,23 @@ export const router = createBrowserRouter([
         element: <DestinationPage />,
       },
       {
+        path: 'destination/:slug',
+        element: <DestinationPage />,
+      },
+      {
+        path: 'explore',
+        element: <ExplorePage />,
+      },
+      {
+        path: 'explore-calendar',
+        element: <ExploreCalendar />,
+      },
+      {
         path: 'countries/:slug',
+        element: <CountryPage />,
+      },
+      {
+        path: 'country/:slug',
         element: <CountryPage />,
       },
       {
@@ -31,6 +52,18 @@ export const router = createBrowserRouter([
       {
         path: 'auth',
         element: <AuthPage />,
+      },
+      {
+        path: 'update-password',
+        element: <UpdatePasswordPage />,
+      },
+      {
+        path: 'admin',
+        element: <AdminPage />,
+      },
+      {
+        path: 'admin/reviews',
+        element: <ReviewsAdminPage />,
       },
       {
         path: '*',

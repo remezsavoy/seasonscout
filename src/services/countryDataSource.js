@@ -13,6 +13,8 @@ const countryFields = [
   'hero_image_attribution_name',
   'hero_image_attribution_url',
   'seasonal_overview',
+  'collection_tags',
+  'quick_facts',
   'is_published',
 ].join(', ');
 
@@ -27,6 +29,7 @@ const destinationFields = [
   'longitude',
   'timezone',
   'summary',
+  'collection_tags',
   'hero_image_url',
   'hero_image_source_name',
   'hero_image_source_url',
@@ -93,7 +96,7 @@ export async function fetchCountryRowBySlug(slug) {
   return data;
 }
 
-export async function fetchCountryFeaturedDestinationRows(countryCode, limit = 6) {
+export async function fetchCountryFeaturedDestinationRows(countryCode, limit = 10) {
   const client = requireSupabaseClient();
 
   const featuredRows = await runQuery(
@@ -152,4 +155,39 @@ export async function fetchCountryPublishedDestinationCount(countryCode) {
   }
 
   return count ?? 0;
+}
+
+function normalizeCollectionTags(collectionTags) {
+  const values = Array.isArray(collectionTags) ? collectionTags : [collectionTags];
+
+  return [...new Set(
+    values
+      .map((value) => String(value ?? '').trim())
+      .filter(Boolean),
+  )];
+}
+
+export async function fetchCountriesByCollection(collectionTags, limit = 12) {
+  const client = requireSupabaseClient();
+  const normalizedTags = normalizeCollectionTags(collectionTags);
+
+  if (normalizedTags.length === 0) {
+    return [];
+  }
+
+  let query = client
+    .from('countries')
+    .select(countryFields)
+    .eq('is_published', true);
+
+  query = normalizedTags.length === 1
+    ? query.contains('collection_tags', [normalizedTags[0]])
+    : query.overlaps('collection_tags', normalizedTags);
+
+  return runQuery(
+    query
+      .order('name', { ascending: true })
+      .limit(limit),
+    `Unable to load countries for collection: ${normalizedTags.join(', ')}`,
+  );
 }

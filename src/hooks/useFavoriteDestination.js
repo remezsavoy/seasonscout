@@ -62,7 +62,7 @@ export function useFavoriteDestination(destinationId) {
     };
   }, [destinationId, userId]);
 
-  async function saveFavorite() {
+  async function toggleFavorite() {
     if (!destinationId) {
       return null;
     }
@@ -74,7 +74,7 @@ export function useFavoriteDestination(destinationId) {
     }));
 
     try {
-      const result = await favoritesService.saveFavorite({ userId, destinationId });
+      const result = await favoritesService.toggleFavorite({ userId, destinationId });
 
       setState((currentState) => ({
         ...currentState,
@@ -99,6 +99,6 @@ export function useFavoriteDestination(destinationId) {
     ...state,
     isAuthLoading,
     isSignedIn: Boolean(userId),
-    saveFavorite,
+    toggleFavorite,
   };
 }

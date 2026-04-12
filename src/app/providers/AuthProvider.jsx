@@ -87,6 +87,50 @@ export function AuthProvider({ children }) {
     });
   }
 
+  async function sendPasswordResetEmail(email) {
+    return authService.sendPasswordResetEmail(email);
+  }
+
+  async function updateProfile(profile) {
+    const data = await authService.updateProfile(profile);
+
+    if (data?.user) {
+      startTransition(() => {
+        setSession((currentSession) =>
+          currentSession
+            ? {
+                ...currentSession,
+                user: data.user,
+              }
+            : currentSession,
+        );
+        setError(null);
+      });
+    }
+
+    return data;
+  }
+
+  async function updatePassword(password) {
+    const data = await authService.updatePassword(password);
+
+    if (data?.user) {
+      startTransition(() => {
+        setSession((currentSession) =>
+          currentSession
+            ? {
+                ...currentSession,
+                user: data.user,
+              }
+            : currentSession,
+        );
+        setError(null);
+      });
+    }
+
+    return data;
+  }
+
   return (
     <AuthContext.Provider
       value={{
@@ -98,6 +142,9 @@ export function AuthProvider({ children }) {
         signIn,
         signUp,
         signOut,
+        sendPasswordResetEmail,
+        updateProfile,
+        updatePassword,
       }}
     >
       {children}

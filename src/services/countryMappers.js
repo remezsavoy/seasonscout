@@ -1,6 +1,22 @@
 import { mapDestinationRowToCard } from './destinationMappers';
 import { buildHeroImageAttribution } from './heroImageAttribution';
 
+function toArray(values) {
+  return Array.isArray(values) ? values.filter(Boolean) : [];
+}
+
+function formatCountryName(value) {
+  if (!value || typeof value !== 'string') {
+    return '';
+  }
+
+  return value
+    .trim()
+    .split(/\s+/)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+    .join(' ');
+}
+
 function humanizeList(values) {
   const normalizedValues = [...new Set(values.map((value) => String(value).trim()).filter(Boolean))];
 
@@ -17,6 +33,51 @@ function humanizeList(values) {
   }
 
   return `${normalizedValues.slice(0, -1).join(', ')}, and ${normalizedValues[normalizedValues.length - 1]}`;
+}
+
+function normalizeCountryQuickFacts(quickFacts) {
+  if (!quickFacts || typeof quickFacts !== 'object' || Array.isArray(quickFacts)) {
+    return null;
+  }
+
+  const currency = quickFacts.currency && typeof quickFacts.currency === 'object' && !Array.isArray(quickFacts.currency)
+    ? quickFacts.currency
+    : {};
+  const normalizedQuickFacts = {
+    capital: typeof quickFacts.capital === 'string' ? quickFacts.capital.trim() : '',
+    languages: Array.isArray(quickFacts.languages)
+      ? quickFacts.languages.map((language) => String(language).trim()).filter(Boolean)
+      : [],
+    timezones: Array.isArray(quickFacts.timezones)
+      ? quickFacts.timezones.map((timezone) => String(timezone).trim()).filter(Boolean)
+      : [],
+    currency: {
+      code: typeof currency.code === 'string' ? currency.code.trim() : '',
+      name: typeof currency.name === 'string' ? currency.name.trim() : '',
+      symbol: typeof currency.symbol === 'string' ? currency.symbol.trim() : '',
+    },
+    drivingSide: typeof quickFacts.driving_side === 'string' ? quickFacts.driving_side.trim() : '',
+    idd: typeof quickFacts.idd === 'string' ? quickFacts.idd.trim() : '',
+    borders: Array.isArray(quickFacts.borders)
+      ? quickFacts.borders.map((border) => String(border).trim()).filter(Boolean)
+      : [],
+    flagUrl: typeof quickFacts.flag_url === 'string' ? quickFacts.flag_url.trim() : '',
+  };
+
+  const hasAnyFacts = Boolean(
+    normalizedQuickFacts.capital
+      || normalizedQuickFacts.languages.length
+      || normalizedQuickFacts.timezones.length
+      || normalizedQuickFacts.currency.code
+      || normalizedQuickFacts.currency.name
+      || normalizedQuickFacts.currency.symbol
+      || normalizedQuickFacts.drivingSide
+      || normalizedQuickFacts.idd
+      || normalizedQuickFacts.borders.length
+      || normalizedQuickFacts.flagUrl,
+  );
+
+  return hasAnyFacts ? normalizedQuickFacts : null;
 }
 
 function buildCountrySummary(country, featuredDestinationCards) {
@@ -51,7 +112,7 @@ function buildCountryClimateGuidance(country, featuredDestinationCards) {
   return `${country.name} does not use one synthetic climate forecast here. Country-level guidance remains qualitative until more curated destination profiles are available.`;
 }
 
-function buildCountryOverviewItems(country, featuredDestinationCards, publishedDestinationCount) {
+function buildCountryOverviewItems(country, publishedDestinationCount) {
   return [
     {
       label: 'Continent',
@@ -59,46 +120,57 @@ function buildCountryOverviewItems(country, featuredDestinationCards, publishedD
     },
     {
       label: 'Published destinations',
-      value: `${publishedDestinationCount} curated now`,
-    },
-    {
-      label: 'Planning approach',
-      value: featuredDestinationCards.length > 0 ? 'Destination-by-destination climate guidance' : 'Editorial overview first',
+      value: `${publishedDestinationCount} Curated destinations`,
     },
   ];
 }
 
 export function mapCountryRowToSearchResult(country) {
+  const countryName = formatCountryName(country.name);
+
   return {
     key: `country-${country.slug}`,
     type: 'country',
     typeLabel: 'Country',
     slug: country.slug,
-    name: country.name,
+    name: countryName,
     subtitle: country.continent || 'Country guide',
     badge: 'Country guide',
     summary:
       country.summary ||
       country.seasonal_overview ||
-      `Explore destination-led travel guidance across ${country.name}.`,
+      `Explore destination-led travel guidance across ${countryName}.`,
     tags: [country.continent || 'Country', 'Destination-based guidance'],
     href: `/countries/${country.slug}`,
     ctaLabel: 'View country guide',
+    region: country.continent || 'Country guide',
+    country: '',
+    bestWindow: 'Country guide',
+    climateCue: 'Destination-led planning',
+    heroImageUrl: country.hero_image_url || null,
+    heroImageAttribution: buildHeroImageAttribution(country),
   };
 }
 
 export function mapCountryRowToPage(country, featuredDestinationRows, publishedDestinationCount) {
   const featuredDestinations = featuredDestinationRows.map(mapDestinationRowToCard);
+  const formattedCountry = {
+    ...country,
+    name: formatCountryName(country.name),
+  };
 
   return {
-    slug: country.slug,
-    name: country.name,
-    continent: country.continent || '',
-    summary: buildCountrySummary(country, featuredDestinations),
-    heroImageUrl: country.hero_image_url || null,
-    heroImageAttribution: buildHeroImageAttribution(country),
-    climateGuidance: buildCountryClimateGuidance(country, featuredDestinations),
-    overviewItems: buildCountryOverviewItems(country, featuredDestinations, publishedDestinationCount),
+    countryId: formattedCountry.code,
+    slug: formattedCountry.slug,
+    name: formattedCountry.name,
+    continent: formattedCountry.continent || '',
+    summary: buildCountrySummary(formattedCountry, featuredDestinations),
+    heroImageUrl: formattedCountry.hero_image_url || null,
+    collectionTags: toArray(formattedCountry.collection_tags),
+    heroImageAttribution: buildHeroImageAttribution(formattedCountry),
+    quickFacts: normalizeCountryQuickFacts(formattedCountry.quick_facts),
+    climateGuidance: buildCountryClimateGuidance(formattedCountry, featuredDestinations),
+    overviewItems: buildCountryOverviewItems(formattedCountry, publishedDestinationCount),
     featuredDestinations,
     publishedDestinationCount,
   };
