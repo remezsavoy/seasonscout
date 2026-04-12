@@ -2,6 +2,9 @@
 
 **Discover Your Next Adventure, Perfectly Timed.**
 
+![Homepage](./screenshots/homepage.png)
+![Country Page](./screenshots/country.png)
+
 SeasonScout is an **AI-powered travel discovery platform** designed to help travelers find the absolute best time to visit any destination. By orchestrating complex data from multiple APIs and leveraging advanced generative AI, SeasonScout curates the perfect travel windows and rich editorial content, ensuring you never book a trip in the wrong season again.
 
 ---
