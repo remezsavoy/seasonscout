@@ -7,17 +7,18 @@ import { Button } from '../ui/Button';
 import { PageContainer } from '../ui/PageContainer';
 
 export function Header() {
-  const { session, isLoading, signOut } = useAuth();
+  const { session, isLoading, signOut, user } = useAuth();
   const { isDark, toggleTheme } = useTheme();
   const displayName = session?.user?.user_metadata?.display_name?.trim();
   const emailHandle = session?.user?.email?.split('@')[0];
   const accountLabel = displayName || emailHandle || 'Signed in';
+  const isAdmin = user?.user_metadata?.role === 'admin';
   const navigationItems = [
     { label: 'Home', to: '/' },
     { label: 'Explore Calendar', to: '/explore-calendar' },
     { label: 'Favorites', to: '/favorites' },
     { label: 'Explore', to: '/explore' },
-    ...(session ? [{ label: 'Admin', to: '/admin' }] : []),
+    ...(isAdmin ? [{ label: 'Admin', to: '/admin' }] : []),
     { label: session ? 'Account' : 'Sign In', to: '/auth' },
   ];
 

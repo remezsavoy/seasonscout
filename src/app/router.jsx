@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
+import { AdminRoute } from '../components/auth/AdminRoute';
 import { AppShell } from '../layouts/AppShell';
 import { AdminPage } from '../pages/AdminPage';
 import { AuthPage } from '../pages/AuthPage';
@@ -58,12 +59,17 @@ export const router = createBrowserRouter([
         element: <UpdatePasswordPage />,
       },
       {
-        path: 'admin',
-        element: <AdminPage />,
-      },
-      {
-        path: 'admin/reviews',
-        element: <ReviewsAdminPage />,
+        element: <AdminRoute />,
+        children: [
+          {
+            path: 'admin',
+            element: <AdminPage />,
+          },
+          {
+            path: 'admin/reviews',
+            element: <ReviewsAdminPage />,
+          },
+        ],
       },
       {
         path: '*',

@@ -145,11 +145,9 @@ export function AuthPage() {
           return;
         }
 
-        setStatusMessage(
-          result.session
-            ? 'Account created and signed in.'
-            : 'Account created. Check your email if confirmation is enabled.',
-        );
+        if (!result.session) {
+          setStatusMessage('Account created. Check your email if confirmation is enabled.');
+        }
       }
 
       setValues(initialFormValues);
