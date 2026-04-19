@@ -12,7 +12,7 @@ import { PageContainer } from '../components/ui/PageContainer';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { StatusPanel } from '../components/ui/StatusPanel';
 import { ToastNotice } from '../components/ui/ToastNotice';
-import { useAsyncResource } from '../hooks/useAsyncResource';
+import { useQuery } from '@tanstack/react-query';
 import { useFavoriteDestination } from '../hooks/useFavoriteDestination';
 import { destinationsService } from '../services/destinationsService';
 import { reviewsService } from '../services/reviewsService';
@@ -20,10 +20,10 @@ import { useEffect, useState } from 'react';
 
 export function DestinationPage() {
   const { slug = '' } = useParams();
-  const { data, error, isLoading } = useAsyncResource(
-    () => destinationsService.getDestinationPageData(slug),
-    [slug],
-  );
+  const { data, error, isLoading } = useQuery({
+    queryKey: ['destination', slug],
+    queryFn: () => destinationsService.getDestinationPageData(slug),
+  });
   const favorite = useFavoriteDestination(data?.id);
   const [toastMessage, setToastMessage] = useState('');
   const [activeLandmarkName, setActiveLandmarkName] = useState('');

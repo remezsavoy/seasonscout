@@ -119,7 +119,7 @@ export function CountryRow({
       </div>
 
       <div
-        className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-[1600px] opacity-100' : 'max-h-0 opacity-0'}`}
+        className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-[9999px] opacity-100' : 'max-h-0 opacity-0'}`}
       >
         <div className="border-t border-ink/8 bg-sand/18 px-5 py-5 sm:px-6">
           <DestinationList

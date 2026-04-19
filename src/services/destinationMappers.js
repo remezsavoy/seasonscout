@@ -206,6 +206,7 @@ function formatScore(value) {
   return `${Math.round(Number(value))}/100`;
 }
 
+
 function buildClimateCue(monthNumbers) {
   if (monthNumbers.length > 0) {
     return `${monthNumbers.length}-month sweet spot`;
@@ -260,7 +261,7 @@ function buildHeroHighlights(destination, climateRows) {
     },
     {
       label: 'Timezone',
-      value: destination.timezone || 'Local time pending',
+      value: destination.timezone ? destination.timezone.replace('/', '/ ') : 'Local time pending',
     },
     {
       label: 'Climate cue',

@@ -10,13 +10,16 @@ import { buttonVariants } from '../components/ui/Button';
 import { PageContainer } from '../components/ui/PageContainer';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { StatusPanel } from '../components/ui/StatusPanel';
-import { useAsyncResource } from '../hooks/useAsyncResource';
+import { useQuery } from '@tanstack/react-query';
 import { countriesService } from '../services/countriesService';
 import { reviewsService } from '../services/reviewsService';
 
 export function CountryPage() {
   const { slug = '' } = useParams();
-  const { data, error, isLoading } = useAsyncResource(() => countriesService.getCountryPageData(slug), [slug]);
+  const { data, error, isLoading } = useQuery({
+    queryKey: ['country', slug],
+    queryFn: () => countriesService.getCountryPageData(slug),
+  });
 
   if (isLoading) {
     return <CountryPageSkeleton />;

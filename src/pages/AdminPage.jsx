@@ -1,4 +1,4 @@
-import { Activity, MapPin, MessageSquare, Star } from 'lucide-react';
+import { Activity, ChevronLeft, ChevronRight, MapPin, MessageSquare, Search, Star } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { AddCountrySection } from '../components/admin/AddCountrySection';
@@ -207,6 +207,10 @@ export function AdminPage() {
   const [regeneratingCountryOption, setRegeneratingCountryOption] = useState('');
   const [pendingReviewCount, setPendingReviewCount] = useState(0);
   const [topRatedDestination, setTopRatedDestination] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const COUNTRIES_PER_PAGE = 10;
 
   useEffect(() => {
     if (!isSubmitting) {
@@ -280,6 +284,10 @@ export function AdminPage() {
     };
   }, [toastMessage]);
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery]);
+
   const progressSteps = useMemo(() => {
     if (activeProgressIndex < 0) {
       return [];
@@ -292,6 +300,23 @@ export function AdminPage() {
     () => Object.values(destinationsByCountryCode).flat(),
     [destinationsByCountryCode],
   );
+
+  const filteredCountries = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return countries;
+    return countries.filter((country) => {
+      if (country.name.toLowerCase().includes(query)) return true;
+      const destinations = destinationsByCountryCode[country.code] ?? [];
+      return destinations.some((d) => d.name.toLowerCase().includes(query));
+    });
+  }, [countries, destinationsByCountryCode, searchQuery]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredCountries.length / COUNTRIES_PER_PAGE));
+
+  const paginatedCountries = useMemo(() => {
+    const start = (currentPage - 1) * COUNTRIES_PER_PAGE;
+    return filteredCountries.slice(start, start + COUNTRIES_PER_PAGE);
+  }, [filteredCountries, currentPage, COUNTRIES_PER_PAGE]);
 
   const missingDataCount = useMemo(
     () =>
@@ -566,18 +591,57 @@ export function AdminPage() {
         ) : null}
 
         {!isLoading && !error ? (
-          <CountryGrid
-            countries={countries}
-            deletingCountryCode={isDeleting ? deletingCountry?.code : ''}
-            destinationsByCountryCode={destinationsByCountryCode}
-            onDeleteDestination={handleDeleteDestination}
-            onEditCountryImage={handleOpenCountryImagePicker}
-            onEditDestinationImage={handleOpenDestinationImagePicker}
-            onDeleteCountry={setDeletingCountry}
-            onRegenerateDestination={handleRegenerateDestination}
-            onRegenerateCountry={handleRegenerateCountry}
-            pendingCountryCode={pendingCountryCode}
-          />
+          <div className="space-y-4">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40" />
+              <input
+                className="w-full rounded-full border border-ink/10 bg-white/80 py-3 pl-11 pr-4 text-sm text-ink shadow-soft placeholder:text-ink/40 focus:border-lagoon/40 focus:outline-none focus:ring-2 focus:ring-lagoon/20"
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search countries or destinations…"
+                type="search"
+                value={searchQuery}
+              />
+            </div>
+
+            <CountryGrid
+              countries={paginatedCountries}
+              deletingCountryCode={isDeleting ? deletingCountry?.code : ''}
+              destinationsByCountryCode={destinationsByCountryCode}
+              onDeleteDestination={handleDeleteDestination}
+              onEditCountryImage={handleOpenCountryImagePicker}
+              onEditDestinationImage={handleOpenDestinationImagePicker}
+              onDeleteCountry={setDeletingCountry}
+              onRegenerateDestination={handleRegenerateDestination}
+              onRegenerateCountry={handleRegenerateCountry}
+              pendingCountryCode={pendingCountryCode}
+            />
+
+            {totalPages > 1 ? (
+              <div className="flex items-center justify-between gap-4 pt-2">
+                <button
+                  className="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white/80 px-4 py-2 text-sm font-medium text-ink shadow-soft transition hover:bg-white disabled:opacity-40"
+                  disabled={currentPage === 1}
+                  onClick={() => setCurrentPage((p) => p - 1)}
+                  type="button"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  Previous
+                </button>
+                <span className="text-sm text-ink/55">
+                  Page {currentPage} of {totalPages}
+                </span>
+                <button
+                  className="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white/80 px-4 py-2 text-sm font-medium text-ink shadow-soft transition hover:bg-white disabled:opacity-40"
+                  disabled={currentPage === totalPages}
+                  onClick={() => setCurrentPage((p) => p + 1)}
+                  type="button"
+                >
+                  Next
+                  <ChevronRight className="h-4 w-4" />
+                </button>
+              </div>
+            ) : null}
+          </div>
         ) : null}
       </section>
 

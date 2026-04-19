@@ -119,8 +119,8 @@ function buildCountryOverviewItems(country, publishedDestinationCount) {
       value: country.continent || 'Country guide',
     },
     {
-      label: 'Published destinations',
-      value: `${publishedDestinationCount} Curated destinations`,
+      label: 'Destinations',
+      value: `${publishedDestinationCount} curated`,
     },
   ];
 }

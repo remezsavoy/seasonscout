@@ -12,7 +12,9 @@ export function DestinationCard({ destination, photoUrl = null, topRightAction =
       : destination.href || `/destinations/${destination.slug}`;
   const heroImageAttribution = destination.heroImageAttribution ?? null;
   const imageUrl = destination.heroImageUrl;
-  const optimizedImageUrl = imageUrl ? imageUrl.replace('w=1600', 'w=600') : '';
+  const optimizedImageUrl = imageUrl
+    ? imageUrl.replace(/w=\d+/, 'w=600').replace(/q=\d+/, 'q=70')
+    : '';
   const creditHref = photoUrl || heroImageAttribution?.photographerUrl;
   const title = destination.name;
   const subtitle = isCountryCard ? '' : destination.country || destination.subtitle || '';
@@ -29,6 +31,8 @@ export function DestinationCard({ destination, photoUrl = null, topRightAction =
               alt={`${destination.name} overview`}
               className="w-full h-full object-cover object-center"
               src={optimizedImageUrl}
+              loading="lazy"
+              decoding="async"
               style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
             {topRightAction ? (

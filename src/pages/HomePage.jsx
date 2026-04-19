@@ -15,7 +15,7 @@ import {
   sharedHeroImageFallbackClassName,
   sharedHeroImageOverlayClassName,
 } from '../components/ui/heroImageStyles';
-import { useAsyncResource } from '../hooks/useAsyncResource';
+import { useQuery } from '@tanstack/react-query';
 import { cn } from '../lib/cn';
 import { destinationsService } from '../services/destinationsService';
 import { homeHeroContentFallback } from '../services/mockData';
@@ -64,15 +64,20 @@ function SeasonalCollectionsSkeleton() {
 }
 
 export function HomePage() {
-  const { data, error, isLoading } = useAsyncResource(destinationsService.getHomePageData, []);
+  const { data, error, isLoading } = useQuery({
+    queryKey: ['home'],
+    queryFn: destinationsService.getHomePageData,
+    staleTime: 2 * 60 * 1000,
+  });
   const featuredDestinations = data?.featuredDestinations ?? [];
   const homeHeroContent = data?.homeHeroContent ?? homeHeroContentFallback;
   const seasonalCollections = data?.seasonalCollections ?? [];
   const sampleDestinationSlug = featuredDestinations[0]?.slug ?? 'kyoto';
-  const heroBackgroundStyle = homeHeroContent?.heroImageUrl
-    ? {
-        backgroundImage: `url(${homeHeroContent.heroImageUrl})`,
-      }
+  const optimizedHeroUrl = homeHeroContent?.heroImageUrl
+    ? homeHeroContent.heroImageUrl.replace(/w=\d+/, 'w=1200').replace(/q=\d+/, 'q=75')
+    : null;
+  const heroBackgroundStyle = optimizedHeroUrl
+    ? { backgroundImage: `url(${optimizedHeroUrl})` }
     : undefined;
 
   return (
@@ -90,15 +95,15 @@ export function HomePage() {
             <div className={sharedHeroImageOverlayClassName} />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/16 via-transparent to-white/6" />
 
-            <div className="relative grid gap-10 px-6 py-8 text-white sm:px-8 sm:py-10 lg:grid-cols-[1.08fr,0.92fr] lg:px-12 lg:py-14">
+            <div className="relative grid gap-10 px-6 py-6 text-white sm:px-8 sm:py-10 lg:grid-cols-[1.08fr,0.92fr] lg:px-12 lg:py-14">
               <div className="max-w-3xl self-center lg:self-end">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white drop-shadow-sm">
                   Travel climate planner
                 </p>
-                <h1 className="mt-5 max-w-3xl font-display text-5xl leading-tight text-white drop-shadow-sm sm:text-6xl">
+                <h1 className="mt-5 max-w-3xl font-display text-3xl leading-tight text-white drop-shadow-sm sm:text-5xl lg:text-6xl">
                   Find the right destination and the right season in one flow.
                 </h1>
-                <p className="mt-6 max-w-2xl text-base leading-8 text-white/90 drop-shadow-sm">
+                <p className="mt-6 max-w-2xl text-base leading-7 text-white/90 drop-shadow-sm sm:leading-8">
                   Stop guessing about the weather. SeasonScout combines climate averages with live forecasts so you can
                   confidently plan your next adventure at the perfect time.
                 </p>
@@ -112,7 +117,7 @@ export function HomePage() {
                 </div>
               </div>
 
-              <div className="grid gap-4 self-end sm:grid-cols-2 lg:pl-4">
+              <div className="hidden gap-4 self-end sm:grid-cols-2 lg:grid lg:pl-4">
                 <div className="sm:col-span-2">
                   <HomeHeroMediaPanel />
                 </div>
