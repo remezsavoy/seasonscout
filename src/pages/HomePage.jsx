@@ -74,7 +74,7 @@ export function HomePage() {
   const seasonalCollections = data?.seasonalCollections ?? [];
   const sampleDestinationSlug = featuredDestinations[0]?.slug ?? 'kyoto';
   const optimizedHeroUrl = homeHeroContent?.heroImageUrl
-    ? homeHeroContent.heroImageUrl.replace(/w=\d+/, 'w=1200').replace(/q=\d+/, 'q=75')
+    ? homeHeroContent.heroImageUrl.replace(/w=\d+/, 'w=1600').replace(/q=\d+/, 'q=80')
     : null;
   const heroBackgroundStyle = optimizedHeroUrl
     ? { backgroundImage: `url(${optimizedHeroUrl})` }

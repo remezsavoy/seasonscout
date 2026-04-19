@@ -9,7 +9,7 @@ import { HeroImageAttribution } from '../ui/HeroImageAttribution';
 
 export function DestinationHero({ destination, topRightAction = null }) {
   const optimizedHeroUrl = destination.heroImageUrl
-    ? destination.heroImageUrl.replace(/w=\d+/, 'w=1200').replace(/q=\d+/, 'q=75')
+    ? destination.heroImageUrl.replace(/w=\d+/, 'w=1600').replace(/q=\d+/, 'q=80')
     : null;
   const backgroundStyle = optimizedHeroUrl
     ? { backgroundImage: `url(${optimizedHeroUrl})` }
