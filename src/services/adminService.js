@@ -216,20 +216,29 @@ export const adminService = {
 
   async deleteDestination(destinationId) {
     const supabase = requireAdminClient();
-    await getCurrentSession(supabase);
+    const session = await getCurrentSession(supabase);
 
-    const { data, error } = await supabase
-      .from('destinations')
-      .delete()
-      .eq('id', destinationId)
-      .select('id')
-      .maybeSingle();
-
-    if (error) {
-      throw createSupabaseServiceError('Unable to delete the selected destination.', error);
+    if (!env.supabaseUrl || !env.supabaseAnonKey) {
+      throw createServiceError('Supabase environment variables are not configured.');
     }
 
-    return data;
+    const response = await fetch(`${env.supabaseUrl}/rest/v1/rpc/admin_delete_destination`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        apikey: env.supabaseAnonKey,
+        Authorization: `Bearer ${session.access_token}`,
+      },
+      body: JSON.stringify({ p_destination_id: destinationId }),
+    });
+
+    if (!response.ok) {
+      let responseBody = null;
+      try { responseBody = await response.json(); } catch { /* empty */ }
+      throw createServiceError(
+        responseBody?.message || responseBody?.error || 'Unable to delete the selected destination.',
+      );
+    }
   },
 
   async deleteCountry(countryCode) {
